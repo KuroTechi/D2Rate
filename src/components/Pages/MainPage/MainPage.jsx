@@ -8,7 +8,6 @@ export default function MainPage() {
     <>
       <Header />
       <main>
-        <h1 className="visually-hidden">Main Page</h1>
         <OngoingMainCompetition />
         <Competitions />
       </main>

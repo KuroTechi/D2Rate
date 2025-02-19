@@ -1,0 +1,20 @@
+@use "../../../styles/helpers" as *;
+
+.footer {
+    &__body {
+        display: flex;
+        justify-content: center;
+        background: var(--block-dark);
+        border-bottom: rem(1) solid var(--divider-medium);
+        border-top: rem(1) solid var(--divider-medium);
+
+        &-wrapper {
+            display: flex;
+            justify-content: space-between;
+            column-gap: rem(12);
+            max-width: var(--container-max-width);
+            width: 100%;
+            padding: fluid(30, 15) fluid(120, 15);
+        }
+    }
+}

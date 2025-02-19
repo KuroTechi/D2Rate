@@ -1,0 +1,7 @@
+@use "../../../styles/helpers" as *;
+
+.profile__avatar {
+    min-width: rem(42);
+    border: 1px solid var(--divider-medium);
+    border-radius: var(--border-radius);
+}

@@ -1,0 +1,18 @@
+@use "../helpers" as *;
+
+.button {
+    color: var(--text-light);
+    background-color: var(--block-light);
+    padding: rem(9) fluid(18, 15);
+    font-weight: 600;
+    line-height: fluid(18, 16);
+    border-radius: fluid(9, 6);
+    border: none;
+    transition-duration: 0.4s;
+
+    &--not-active {
+        opacity: 0.3;
+        pointer-events: none;
+        user-select: none;
+    }
+}

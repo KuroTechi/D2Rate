@@ -1,0 +1,28 @@
+@use "../../../styles/helpers" as *;
+
+.container {
+    position: relative;
+    max-height: rem(475);
+    &::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(90deg, #000 0%, rgba(0, 0, 0, 0) 20%, rgba(0, 0, 0, 0) 80%, #000 100%);
+        pointer-events: none;
+        z-index: 1;
+    }
+    &::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(0deg, #000 0%, rgb(0 0 0 / 0%) 38%);
+        pointer-events: none;
+        z-index: 1;
+    }
+}
+
+.img {
+    height: 100%;
+    object-position: 20% 50%;
+    object-fit: cover;
+}

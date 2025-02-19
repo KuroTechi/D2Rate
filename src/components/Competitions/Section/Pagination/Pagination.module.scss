@@ -1,0 +1,49 @@
+@use "../../../../styles/helpers" as *;
+
+.pagination {
+    display: flex;
+    justify-content: center;
+}
+.list {
+    display: flex;
+    column-gap: rem(8);
+    padding: rem(3) rem(5);
+}
+.item {
+    cursor: pointer;
+    background: none;
+    list-style: none;
+    padding-block: fluid(10, 6);
+    padding-inline: fluid(20, 14);
+    line-height: rem(23);
+    font-weight: 600;
+    font-size: rem(16);
+    transition-duration: 0.4s;
+    color: var(--text-placeholder);
+    @include hover {
+        color: var(--text-light);
+        background: var(--divider-dark);
+    }
+}
+.active {
+    color: var(--text-light);
+
+    border-radius: rem(10);
+    background: var(--divider-medium);
+    pointer-events: none;
+    user-select: none;
+    cursor: default;
+    @include hover {
+        background: var(--divider-medium);
+    }
+}
+.button {
+    display: flex;
+    align-items: center;
+    background-color: transparent;
+    padding-block: fluid(10, 3);
+    padding-inline: fluid(20, 6);
+    @include hover {
+        background-color: var(--divider-medium);
+    }
+}

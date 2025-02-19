@@ -1,0 +1,22 @@
+@use "../../../styles/helpers" as *;
+
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: var(--text-light);
+    font-size: var(--card-default-text);
+    line-height: var(--card-default-line-height);
+    font-weight: 600;
+    max-width: 17.375rem;
+    padding-top: fluid(26, 14);
+    padding-bottom: fluid(40, 18);
+    font-size: fluid(16, 14);
+    font-weight: 600;
+
+    & h2,
+    h3 {
+        font-size: fluid(16, 14);
+        line-height: fluid(16, 14);
+    }
+}

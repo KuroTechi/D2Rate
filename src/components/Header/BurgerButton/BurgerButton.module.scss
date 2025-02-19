@@ -1,0 +1,38 @@
+@use "../../../styles/helpers" as *;
+
+.burger-button {
+    @include square(rem(34));
+
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: rem(8.5) rem(4.25);
+    color: var(--text-placeholder);
+    background-color: transparent;
+    border: none;
+    position: relative;
+    z-index: 999;
+    @include hover {
+        color: var(--text-light);
+    }
+
+    &.is-active {
+        .burger-button__line {
+            &:first-child {
+                transform: rotate(45deg) translate(rem(5), rem(5));
+            }
+            &:nth-child(2) {
+                transform: rotate(-45deg) translate(rem(5), rem(-5));
+            }
+        }
+    }
+
+    &__line {
+        width: 100%;
+        height: rem(2);
+        background-color: currentColor;
+        border-radius: 2rem;
+        transition-duration: var(--transition-duration);
+        transform-origin: center;
+    }
+}

@@ -1,0 +1,24 @@
+@use "../helpers" as *;
+
+.icon {
+    &--medium {
+        width: fluid(24, 15);
+        height: fluid(24, 15);
+    }
+    &--large {
+        width: fluid(32, 22);
+        height: fluid(32, 22);
+    }
+    &--default-color {
+        color: var(--text-placeholder);
+    }
+    &--yellow-color {
+        color: var(--card-yellow-icon);
+    }
+    &--red-color {
+        color: var(--red-color);
+    }
+    &--green-color {
+        color: var(--card-status-active);
+    }
+}

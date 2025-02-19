@@ -1,0 +1,22 @@
+@use "../../../../styles/helpers" as *;
+
+.footer__logo {
+    display: flex;
+    align-items: center;
+    column-gap: fluid(24, 10);
+
+    &-image {
+        z-index: 0;
+        width: fluid(60, 42);
+        height: fluid(60, 42);
+    }
+
+    &-text {
+        font-size: fluid(32, 20);
+        line-height: rem(32);
+        font-weight: 500;
+        @include mobile {
+            display: none;
+        }
+    }
+}

@@ -1,0 +1,8 @@
+@use "../../../../styles/helpers" as *;
+
+.title {
+    color: var(--text-placeholder);
+    line-height: rem(17);
+    font-weight: 500;
+    margin-bottom: rem(8);
+}

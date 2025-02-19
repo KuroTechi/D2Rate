@@ -1,0 +1,16 @@
+@use "../../styles/helpers" as *;
+
+.competitions {
+    background: var(--background-background);
+    max-width: var(--header-max-width);
+    margin-inline: auto;
+    padding-inline: fluid(120, 15);
+    padding-top: fluid(40, 24);
+    padding-bottom: fluid(120, 75);
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    row-gap: fluid(42, 24);
+}

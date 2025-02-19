@@ -1,0 +1,10 @@
+@use "../helpers" as *;
+
+.tile {
+    display: inline-flex;
+    align-items: center;
+    gap: fluid(9, 6);
+    padding: fluid(12, 9) fluid(12, 6);
+    border-radius: fluid(9, 6);
+    background: var(--card-background);
+}

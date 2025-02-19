@@ -1,0 +1,19 @@
+@use "../../../../styles/helpers" as *;
+
+.soc1als {
+    display: flex;
+    &__list {
+        display: flex;
+        align-items: center;
+        column-gap: fluid(24, 12);
+    }
+    &__item {
+        display: flex;
+    }
+    &__link {
+        color: var(--text-dark);
+        @include hover {
+            color: var(--text-light);
+        }
+    }
+}

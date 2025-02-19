@@ -1,0 +1,34 @@
+@use "../../../../styles/helpers" as *;
+
+.info {
+    display: grid;
+    gap: rem(9);
+    grid-template-areas:
+        "image image"
+        "prize members"
+        "date date";
+    grid-template-columns: auto 1fr;
+    margin-bottom: rem(16);
+}
+
+.info img {
+    grid-area: image;
+    max-width: 100%;
+    height: auto;
+}
+
+.prize {
+    grid-area: prize;
+
+    color: var(--text-yellow);
+}
+.members {
+    grid-area: members;
+    justify-self: end;
+}
+.date {
+    grid-area: date;
+}
+.label {
+    color: var(--text-placeholder);
+}

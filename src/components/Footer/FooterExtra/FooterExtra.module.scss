@@ -1,0 +1,7 @@
+@use "../../../styles/helpers" as *;
+
+.footer__extra {
+    display: flex;
+    justify-content: center;
+    padding-block: fluid(24, 12);
+}

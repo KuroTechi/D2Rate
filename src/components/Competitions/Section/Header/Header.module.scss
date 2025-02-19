@@ -1,0 +1,22 @@
+@use "../../../../styles/helpers" as *;
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    column-gap: rem(10);
+    margin-bottom: fluid(20, 12);
+}
+.title {
+    display: inline-flex;
+    column-gap: fluid(12, 9);
+    font-size: fluid(18, 15);
+    font-weight: 500;
+    color: var(--text-light);
+    align-items: center;
+}
+.button {
+    font-size: fluid(18, 14);
+    @include hover {
+        background-color: var(--divider-medium);
+    }
+}

@@ -1,0 +1,54 @@
+@use "helpers" as *;
+
+#root {
+    display: flex;
+    flex-direction: column;
+}
+
+::-webkit-scrollbar-track {
+    background-color: var(--divider-medium);
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: var(--text-placeholder);
+}
+
+html {
+    &.is-lock {
+        overflow: hidden;
+    }
+}
+
+html {
+    scrollbar-color: var(--text-placeholder) var(--divider-medium);
+}
+
+body {
+    font-family: var(--font-family-base);
+    letter-spacing: 0.03em;
+    color: var(--text-medium);
+    background-color: var(--background-background);
+}
+
+main {
+    flex-grow: 1;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+}
+
+a,
+button,
+label,
+input,
+textarea,
+select,
+svg * {
+    transition-duration: var(--transition-duration);
+}

@@ -1,0 +1,7 @@
+@use "../../../../styles/helpers" as *;
+
+.footer__copyright {
+    color: var(--text-placeholder);
+    font-weight: 400;
+    @include fluid-text(18, 16);
+}

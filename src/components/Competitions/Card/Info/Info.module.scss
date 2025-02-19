@@ -1,0 +1,46 @@
+@use "../../../../styles/helpers" as *;
+
+.info {
+    display: flex;
+    flex-direction: column;
+    row-gap: fluid(9, 6);
+    grid-area: info;
+    font-size: fluid(16, 14);
+    line-height: fluid(16, 14);
+}
+.title {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 100%;
+    padding: rem(9) fluid(14, 9);
+    font-size: fluid(18, 14);
+    line-height: fluid(18, 14);
+}
+.body {
+    display: flex;
+    column-gap: rem(6);
+    padding-inline: fluid(10, 6);
+}
+.date,
+.prize {
+    justify-content: center;
+    padding: fluid(12, 10);
+}
+
+.date {
+    flex: 1;
+    justify-content: flex-start;
+    column-gap: rem(12);
+    & > span {
+        white-space: nowrap;
+    }
+}
+
+.icon {
+    flex-shrink: 0;
+}
+
+.prize {
+    color: var(--text-yellow);
+}

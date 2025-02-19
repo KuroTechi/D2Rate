@@ -1,0 +1,31 @@
+@use "../../../styles/helpers" as *;
+
+.section {
+    padding-bottom: fluid(54, 24);
+    border-bottom: rem(1) solid var(--divider-dark);
+}
+.list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(rem(345), 1fr));
+    gap: fluid(16, 9);
+
+    &:not(:last-child) {
+        padding-bottom: rem(27);
+    }
+
+    @include tablet {
+        grid-template-columns: 1fr 1fr;
+    }
+    @include mobile {
+        grid-template-columns: 1fr;
+    }
+}
+
+.text {
+    text-align: center;
+    color: var(--text-placeholder);
+    padding-block: rem(30);
+    font-size: fluid(24, 18);
+    line-height: fluid(24, 18);
+    font-weight: 500;
+}

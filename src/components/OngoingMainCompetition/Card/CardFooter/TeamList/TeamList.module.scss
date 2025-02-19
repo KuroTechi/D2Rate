@@ -1,0 +1,51 @@
+@use "../../../../../styles/helpers" as *;
+.teams {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    align-items: center;
+    justify-items: center;
+    gap: 0;
+    background: var(--block-dark);
+    backdrop-filter: blur(12px);
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    transition-duration: 0.3s;
+    user-select: none; /* Запрещает выделение текста */
+    -webkit-user-select: none;
+    -moz-user-select: none;
+
+    &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: -10px;
+        right: -10px;
+        bottom: 0;
+        background: linear-gradient(
+            159deg,
+            rgba(255, 255, 255, 0.2) 0%,
+            transparent 20%,
+            transparent 79%,
+            rgba(255, 255, 255, 0.3) 118%
+        );
+        z-index: -1;
+        pointer-events: none;
+    }
+
+    @include hover {
+        background-color: var(--card-commands-hover-color);
+    }
+}
+.text {
+    color: var(--text-placeholder);
+    font-weight: 600;
+    line-height: rem(24);
+    font-size: fluid(24, 16);
+}
+.logo {
+    background-color: transparent;
+    max-width: fluid(40, 28);
+    max-height: fluid(40, 28);
+    object-fit: cover;
+}

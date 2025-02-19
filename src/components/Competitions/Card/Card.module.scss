@@ -1,0 +1,24 @@
+@use "../../../styles/helpers/" as *;
+.card {
+    cursor: pointer;
+    border-radius: rem(16);
+    border: rem(1) solid var(--divider-medium);
+    color: var(--text-light);
+    font-weight: 600;
+    padding-bottom: fluid(10, 6);
+
+    overflow: hidden;
+    @include hover {
+        background-color: var(--divider-dark);
+    }
+}
+
+.image {
+    border-radius: rem(4);
+    grid-area: image;
+    margin-bottom: fluid(12, 6);
+    height: rem(135);
+    width: 100%;
+    object-fit: cover;
+    user-select: none;
+}

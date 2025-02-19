@@ -1,0 +1,12 @@
+@use "../../styles/helpers" as *;
+
+.ongoing {
+    background: var(--background-background);
+    max-width: var(--header-max-width);
+    margin-inline: auto;
+    padding-inline: fluid(120, 15);
+}
+.wrapper {
+    display: grid;
+    grid-template-columns: 1fr auto;
+}

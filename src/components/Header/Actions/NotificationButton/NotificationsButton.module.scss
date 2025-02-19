@@ -1,0 +1,18 @@
+@use "../../../../styles/helpers" as *;
+
+.notifications-button {
+    width: rem(42);
+    height: rem(42);
+    background-color: transparent;
+    border: 0;
+    padding: 0;
+    &__icon {
+        color: var(--text-placeholder);
+        transition-duration: var(--transition-duration);
+        @include hover {
+            color: var(--text-light);
+            border-radius: rem(8);
+            background-color: var(--divider-medium);
+        }
+    }
+}

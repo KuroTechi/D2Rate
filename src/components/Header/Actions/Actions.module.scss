@@ -1,0 +1,17 @@
+@use "../../../styles/helpers" as *;
+
+.actions {
+    display: flex;
+    flex-direction: row;
+    column-gap: rem(12);
+    @include laptop {
+        column-gap: rem(4);
+    }
+
+    @include tablet {
+        order: -1;
+        width: 100%;
+        justify-content: end;
+        margin-bottom: rem(10);
+    }
+}

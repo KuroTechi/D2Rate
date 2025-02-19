@@ -1,0 +1,61 @@
+@use "../../../styles/helpers" as *;
+
+.field {
+    &-wrapper {
+        position: relative;
+        display: flex;
+        align-items: center;
+
+        @include tablet {
+            width: 100%;
+            max-width: rem(560);
+        }
+    }
+    &--icon-left {
+        position: absolute;
+        left: rem(12);
+        top: 50%;
+        transform: translateY(-50%);
+        color: var(--text-placeholder);
+        width: rem(24);
+        height: rem(24);
+        pointer-events: none;
+    }
+    &__input {
+        max-width: rem(234);
+        transition-duration: var(--transition-duration);
+        font-size: rem(16);
+        font-weight: 600;
+        font-family: var(--font-family-base);
+        width: 100%;
+        height: rem(42);
+        color: var(--text-light);
+        padding: rem(9) rem(12) rem(9) rem(44);
+        background: var(--divider-medium);
+        border: rem(2) solid transparent;
+        border-radius: var(--border-radius);
+        outline: none;
+
+        @include laptop {
+            font-size: rem(14);
+            padding-left: rem(36);
+        }
+
+        @include tablet {
+            max-width: 100%;
+        }
+
+        &::placeholder {
+            font-weight: 400;
+            font-size: rem(17);
+        }
+
+        @include hover {
+            background: var(--divider-dark);
+        }
+        &:focus {
+            background: var(--divider-dark);
+            border-color: var(--text-light); // Кастомный стиль для фокуса
+        }
+    }
+}

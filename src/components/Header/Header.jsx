@@ -4,9 +4,9 @@ import Navigation from "./Navigation/Navigation.jsx";
 import Actions from "./Actions/Actions.jsx";
 import BurgerButton from "./BurgerButton/BurgerButton.jsx";
 import UserProfileAvatar from "./UserProfileLink/UserProfileLink.jsx";
-import { useEffect, useState } from "react";
 import ControlField from "./ControlField/ControlField.jsx";
 import { media, navigationItems } from "./data.js";
+import { useEffect, useState } from "react";
 import useMediaQuery from "../../utils/Hooks/MatchMedia.jsx";
 
 export default function Header() {
@@ -36,25 +36,23 @@ export default function Header() {
   }, [isTablet]);
 
   return (
-    <header className={styles["header"]}>
-      <div className={`${styles["header__body"]}`}>
-        <div className={styles["header__body-inner"]}>
-          <BurgerButton
-            isOpenOverlay={isOpenOverlay}
-            onClickOpenOverlay={handleClickOpenOverlay}
-          />
-          <Logo className={styles["header__logo"]} />
-          <div
-            className={`${styles["header__overlay"]} ${
-              isOpenOverlay ? styles["is-active"] : ""
-            }`}
-          >
-            <Navigation items={navigationItems} />
-            <ControlField />
-            <Actions />
-          </div>
-          <UserProfileAvatar />
+    <header className={styles.header}>
+      <div className={styles.wrapper}>
+        <BurgerButton
+          isOpenOverlay={isOpenOverlay}
+          onClickOpenOverlay={handleClickOpenOverlay}
+        />
+        <Logo />
+        <div
+          className={`${styles.overlay} ${
+            isOpenOverlay ? styles["is-active"] : ""
+          }`}
+        >
+          <Navigation items={navigationItems} />
+          <ControlField />
+          <Actions />
         </div>
+        <UserProfileAvatar />
       </div>
     </header>
   );

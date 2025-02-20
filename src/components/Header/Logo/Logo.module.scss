@@ -1,1 +1,12 @@
 @use "../../../styles/helpers" as *;
+
+.logo {
+    height: rem(38);
+    width: rem(38);
+    min-width: rem(38);
+    position: relative;
+    z-index: 2;
+    @include tablet-above {
+        margin-right: rem(20);
+    }
+}

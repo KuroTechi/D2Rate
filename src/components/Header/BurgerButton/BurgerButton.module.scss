@@ -1,6 +1,6 @@
 @use "../../../styles/helpers" as *;
 
-.burger-button {
+.button {
     @include square(rem(34));
 
     display: inline-flex;
@@ -11,14 +11,11 @@
     background-color: transparent;
     border: none;
     position: relative;
-    z-index: 999;
-    @include hover {
-        color: var(--text-light);
-    }
+    z-index: 2;
 
     &.is-active {
-        .burger-button__line {
-            &:first-child {
+        .line {
+            &:nth-child(1) {
                 transform: rotate(45deg) translate(rem(5), rem(5));
             }
             &:nth-child(2) {
@@ -27,12 +24,16 @@
         }
     }
 
-    &__line {
-        width: 100%;
-        height: rem(2);
-        background-color: currentColor;
-        border-radius: 2rem;
-        transition-duration: var(--transition-duration);
-        transform-origin: center;
+    @include hover {
+        color: var(--text-light);
     }
+}
+
+.line {
+    width: 100%;
+    height: rem(2);
+    background-color: currentColor;
+    border-radius: rem(32);
+    transition-duration: var(--transition-duration);
+    transform-origin: center;
 }

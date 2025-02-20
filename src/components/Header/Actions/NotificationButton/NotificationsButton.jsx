@@ -1,15 +1,10 @@
 import styles from "./NotificationsButton.module.scss";
-import Icon from "../../../UI/Icon";
+import NotificationsIcon from "../../../UI/icons/NotificationsIcon";
+
 const NotificationsButton = () => {
   return (
-    <button
-      className={styles["notifications-button"]}
-      aria-label="Notifications"
-    >
-      <Icon
-        name={"notifications"}
-        className={styles["notifications-button__icon"]}
-      />
+    <button className="button--interactive" aria-label="Notifications">
+      <NotificationsIcon className="icon--interactive icon--default-color" />
     </button>
   );
 };

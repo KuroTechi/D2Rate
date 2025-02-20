@@ -11,26 +11,21 @@
         max-width: rem(560);
         margin-right: 0;
     }
+}
 
-    &__list {
-        display: flex;
-        column-gap: fluid(12, 4);
-        color: var(--text-placeholder);
-        font-size: fluid(16, 14);
-        font-weight: 600;
-        letter-spacing: rem(0.48);
+.list {
+    display: flex;
+    column-gap: fluid(12, 4);
+    color: var(--text-placeholder);
+    font-size: fluid(16, 14);
+    font-weight: 600;
+    letter-spacing: rem(0.48);
 
-        @include laptop {
-            column-gap: rem(4);
-        }
-
-        @include tablet {
-            display: flex;
-            flex-direction: column;
-            row-gap: rem(10);
-            border: rem(2) solid var(--text-placeholder);
-            border-radius: rem(10);
-            padding: rem(10);
-        }
+    @include tablet {
+        flex-direction: column;
+        row-gap: rem(10);
+        border: rem(2) solid var(--text-placeholder);
+        border-radius: rem(10);
+        padding: rem(10);
     }
 }

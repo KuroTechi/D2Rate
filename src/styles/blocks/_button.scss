@@ -15,4 +15,12 @@
         pointer-events: none;
         user-select: none;
     }
+    &--interactive {
+        width: rem(42);
+        height: rem(42);
+        background-color: transparent;
+        border: none;
+        padding: 0;
+        border-radius: rem(8);
+    }
 }

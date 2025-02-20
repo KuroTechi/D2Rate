@@ -28,8 +28,8 @@ const Navigation = ({ items }) => {
   };
 
   return (
-    <nav className={styles["navigation"]} aria-label="Main Navigation">
-      <ul className={styles["navigation__list"]}>
+    <nav className={styles.navigation} aria-label="Main Navigation">
+      <ul className={styles.list}>
         {items.map((item, index) => (
           <Item
             item={item}

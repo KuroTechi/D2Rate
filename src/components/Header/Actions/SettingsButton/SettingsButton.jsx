@@ -1,9 +1,10 @@
 import styles from "./SettingsButton.module.scss";
-import Icon from "../../../UI/Icon";
+import SettingsIcon from "../../../UI/icons/Settings";
+
 const SettingsButton = () => {
   return (
-    <button className={styles["settings-button"]} aria-label="Settings">
-      <Icon name={"settings"} className={styles["settings-button__icon"]} />
+    <button className="button--interactive" aria-label="Settings">
+      <SettingsIcon className="icon--interactive icon--default-color" />
     </button>
   );
 };

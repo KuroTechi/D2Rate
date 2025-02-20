@@ -28,4 +28,12 @@
     &--fill-white {
         fill: white;
     }
+    &--interactive {
+        transition-duration: 0.3s;
+        border-radius: inherit;
+        @include hover {
+            color: var(--text-light);
+            background-color: var(--divider-medium);
+        }
+    }
 }

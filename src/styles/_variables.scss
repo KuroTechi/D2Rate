@@ -5,11 +5,14 @@
     --header-padding-x: #{rem(24)};
     --padding-button: 40px;
     --container-max-width: #{rem(1490)};
+    --container-padding-x: #{rem(15)};
 
     --border-radius: #{rem(8)};
     --border: #{rem(1)} solid var(--text-medium);
 
     --transition-duration: 0.2s;
+
+    --pages-title-bg: linear-gradient(135deg, #717171, #404040);
 
     --card-image-border: #{rem(1) solid var(--divider-medium)};
     --card-default-font-size: #{fluid(16, 14)};

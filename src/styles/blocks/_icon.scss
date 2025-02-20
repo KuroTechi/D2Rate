@@ -9,6 +9,10 @@
         width: fluid(32, 22);
         height: fluid(32, 22);
     }
+    &--extra-large {
+        width: fluid(48, 32);
+        height: fluid(48, 32);
+    }
     &--default-color {
         color: var(--text-placeholder);
     }
@@ -20,5 +24,8 @@
     }
     &--green-color {
         color: var(--card-status-active);
+    }
+    &--fill-white {
+        fill: white;
     }
 }

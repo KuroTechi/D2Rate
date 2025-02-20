@@ -24,13 +24,14 @@
 
     &__icon {
         &--right {
-            margin-left: rem(12);
+            margin-left: rem(2);
             @include tablet {
                 margin-left: auto;
             }
         }
         &--left {
-            margin-right: rem(9);
+            fill: currentColor;
+            margin-right: rem(12);
         }
     }
 

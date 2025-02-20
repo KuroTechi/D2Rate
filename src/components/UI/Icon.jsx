@@ -7,6 +7,7 @@ import NotificationsIcon from "./icons/NotificationsIcon";
 import SettingsIcon from "./icons/Settings";
 import PlayersIcon from "./icons/PlayersIcon";
 import HeroesIcon from "./icons/HeroesIcon";
+import MatchesIcon from "./icons/MatchesIcon";
 const icons = {
   trending: TrendingIcon,
   leagues: LeaguesIcon,
@@ -17,6 +18,7 @@ const icons = {
   settings: SettingsIcon,
   players: PlayersIcon,
   heroes: HeroesIcon,
+  matches: MatchesIcon,
 };
 
 const Icon = ({ name, className = "" }) => {

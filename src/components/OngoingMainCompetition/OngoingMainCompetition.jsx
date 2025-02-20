@@ -5,7 +5,10 @@ import Divider from "../UI/Divider";
 export default function OngoingMainCompetition() {
   return (
     <>
-      <section className={styles.ongoing} aria-labelledby="ongoing-title">
+      <section
+        className={`${styles.ongoing} container`}
+        aria-labelledby="ongoing-title"
+      >
         <h1 className="visually-hidden" id="ongoing-title">
           Ongoing Main Competition
         </h1>

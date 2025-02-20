@@ -1,16 +1,15 @@
 @use "helpers" as *;
 
 .container {
-    max-width: calc(var(--header-max-width) + var(--header-padding-x) * 2);
-    margin-inline: auto;
+    max-width: calc(var(--container-max-width) + var(--container-padding-x) * 2);
     padding-inline: var(--container-padding-x);
+    margin-inline: auto;
 }
 
 .divider {
-    border: none;
-    margin: 0;
-    min-height: rem(1);
-    border-bottom: rem(1) solid var(--divider-medium);
+    width: 100%;
+    height: rem(1);
+    background-color: var(--divider-medium);
 }
 
 .visually-hidden {

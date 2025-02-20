@@ -1,5 +1,5 @@
 const Divider = () => {
-  return <hr className="divider"></hr>;
+  return <div className="divider"></div>;
 };
 
 export default Divider;

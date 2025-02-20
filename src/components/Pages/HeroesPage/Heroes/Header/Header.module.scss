@@ -1,0 +1,34 @@
+@use "../../../../../styles/helpers" as *;
+
+.wrapper {
+    display: flex;
+    justify-content: center;
+    background: var(--pages-title-bg);
+}
+.header {
+    display: flex;
+    align-items: center;
+    column-gap: rem(24);
+    width: 100%;
+    padding-block: rem(16);
+}
+
+.icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: fluid(80, 60);
+    width: fluid(80, 60);
+    background-color: var(--divider-dark);
+    border-radius: rem(10);
+    @include mobile {
+        display: none;
+    }
+}
+.title {
+    color: white;
+    font-size: fluid(32, 18);
+    text-transform: capitalize;
+    line-height: fluid(32, 18);
+    font-weight: 700;
+}

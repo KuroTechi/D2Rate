@@ -1,1 +1,1 @@
-Стек - "React + RTK + SCSS (БЭМ) + React Router + GraphQL"
+Стек: JavaScript (ES6+), React, Redux Toolkit (RTK) с createAsyncThunk для GraphQL, SCSS (БЭМ), React Router.

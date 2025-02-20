@@ -12,7 +12,7 @@ const one = [
     prize: "15 000",
   },
   {
-    image: "	https://cdn.stratz.com/images/dota2/leagues/16313.png",
+    image: "https://cdn.stratz.com/images/dota2/leagues/16313.png",
     league: "Ancients League",
     date: "30 Oct - 01 Mar",
     prize: "16 000",
@@ -33,7 +33,7 @@ const three = [
     prize: "15 000",
   },
   {
-    image: "	https://cdn.stratz.com/images/dota2/leagues/16313.png",
+    image: "https://cdn.stratz.com/images/dota2/leagues/16313.png",
     league: "Ancients League",
     date: "30 Oct - 01 Mar",
     prize: "16 000",
@@ -51,7 +51,7 @@ const three = [
     prize: "15 000",
   },
   {
-    image: "	https://cdn.stratz.com/images/dota2/leagues/16313.png",
+    image: "https://cdn.stratz.com/images/dota2/leagues/16313.png",
     league: "Ancients League",
     date: "30 Oct - 01 Mar",
     prize: "16 000",
@@ -69,7 +69,7 @@ const three = [
     prize: "15 000",
   },
   {
-    image: "	https://cdn.stratz.com/images/dota2/leagues/16313.png",
+    image: "https://cdn.stratz.com/images/dota2/leagues/16313.png",
     league: "Ancients League",
     date: "30 Oct - 01 Mar",
     prize: "16 000",
@@ -83,7 +83,10 @@ const three = [
 ];
 export default function Competitions() {
   return (
-    <section className={styles.competitions} aria-labelledby="competitions">
+    <section
+      className={`${styles.competitions} container`}
+      aria-labelledby="competitions"
+    >
       <h2 className="visually-hidden" id="competitions">
         All Competitions
       </h2>

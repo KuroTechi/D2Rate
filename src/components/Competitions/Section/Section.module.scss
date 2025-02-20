@@ -6,18 +6,11 @@
 }
 .list {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(rem(345), 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(rem(290), 1fr));
     gap: fluid(16, 9);
 
     &:not(:last-child) {
         padding-bottom: rem(27);
-    }
-
-    @include tablet {
-        grid-template-columns: 1fr 1fr;
-    }
-    @include mobile {
-        grid-template-columns: 1fr;
     }
 }
 

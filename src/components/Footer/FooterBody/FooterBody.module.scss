@@ -12,9 +12,8 @@
             display: flex;
             justify-content: space-between;
             column-gap: rem(12);
-            max-width: var(--container-max-width);
             width: 100%;
-            padding: fluid(30, 15) fluid(120, 15);
+            padding-block: fluid(30, 15);
         }
     }
 }

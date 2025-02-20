@@ -1,0 +1,23 @@
+@use "../../../../../../styles/helpers" as *;
+
+.list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(42px, 1fr));
+    gap: rem(8);
+    user-select: none;
+}
+.header {
+    display: flex;
+    column-gap: rem(6);
+    margin-bottom: rem(16);
+}
+.image {
+    height: rem(20);
+    width: rem(20);
+}
+.title {
+    font-size: fluid(16, 14);
+    font-weight: 700;
+    line-height: rem(20);
+    color: var(--text-light);
+}

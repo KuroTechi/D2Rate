@@ -1,0 +1,15 @@
+@use "../../../../../styles/helpers" as *;
+
+.container {
+    margin-top: rem(24);
+    margin-bottom: rem(24);
+}
+.list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: rem(24);
+
+    @include laptop {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}

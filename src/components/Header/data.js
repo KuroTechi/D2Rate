@@ -43,7 +43,7 @@ const navigationItems = [
   },
   {
     value: "Matches",
-    iconLeft: "leagues",
+    iconLeft: "matches",
     iconRight: "arrowDown",
     submenu: [
       {
@@ -58,7 +58,7 @@ const navigationItems = [
   },
   {
     value: "Leagues",
-    iconLeft: "trending",
+    iconLeft: "leagues",
     iconRight: "arrowDown",
     submenu: [
       {

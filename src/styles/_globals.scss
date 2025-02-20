@@ -3,6 +3,7 @@
 #root {
     display: flex;
     flex-direction: column;
+    min-height: 100%;
 }
 
 ::-webkit-scrollbar-track {
@@ -21,9 +22,11 @@ html {
 
 html {
     scrollbar-color: var(--text-placeholder) var(--divider-medium);
+    height: 100%;
 }
 
 body {
+    height: 100%;
     font-family: var(--font-family-base);
     letter-spacing: 0.03em;
     color: var(--text-medium);
@@ -32,6 +35,7 @@ body {
 
 main {
     flex-grow: 1;
+    min-height: 100vh;
 }
 
 h1,

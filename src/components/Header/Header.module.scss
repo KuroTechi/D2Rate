@@ -30,6 +30,9 @@
         min-width: rem(38);
         position: relative;
         z-index: 99;
+        @include tablet-above {
+            margin-right: rem(20);
+        }
     }
 
     &__overlay {

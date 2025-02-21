@@ -1,8 +1,10 @@
-import Card from "../Card/Card";
 import styles from "./Section.module.scss";
-import Header from "./Header/Header";
+
+import Title from "./Title/Title";
+import LeagueCard from "./LeagueCard/LeagueCard";
 import Pagination from "./Pagination/Pagination";
 import { useState, useRef, useEffect } from "react";
+
 export default function Section({ title, icon, items }) {
   const [currentPage, setCurrentPage] = useState(1);
   const [isMounted, setIsMounted] = useState(false);
@@ -26,13 +28,6 @@ export default function Section({ title, icon, items }) {
       setIsMounted(true);
       return;
     }
-
-    console.log("gbcr " + sectionRef.current.getBoundingClientRect().top);
-    console.log("wScrlY " + window.scrollY);
-    console.log(
-      sectionRef.current.getBoundingClientRect().top + window.scrollY
-    );
-
     if (sectionRef.current) {
       const offset = 20;
       const sectionTop =
@@ -43,13 +38,13 @@ export default function Section({ title, icon, items }) {
 
   return (
     <div className={styles.section} ref={sectionRef}>
-      <Header title={title} icon={icon} isButtonNotActive={isNoResults} />
+      <Title title={title} icon={icon} isButtonNotActive={isNoResults} />
 
       {isNoResults && <NoLeagues />}
 
       <div className={styles.list}>
         {currentItems?.map((item, index) => {
-          return <Card item={item} key={index} />;
+          return <LeagueCard item={item} key={index} />;
         })}
       </div>
 

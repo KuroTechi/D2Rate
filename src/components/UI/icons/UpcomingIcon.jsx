@@ -1,5 +1,6 @@
 const UpcomingIcon = ({ className }) => (
   <svg
+    aria-hidden="true"
     className={className}
     width="32"
     height="32"

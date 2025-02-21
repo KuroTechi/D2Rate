@@ -1,8 +1,8 @@
-import styles from "./Card.module.scss";
+import styles from "./LeagueCard.module.scss";
 
 import Info from "./Info/Info";
 
-export default function Card({ item }) {
+export default function LeagueCard({ item }) {
   return (
     <a className={styles.link}>
       <div className={styles.card}>

@@ -1,5 +1,5 @@
-import ArrowLeftIcon from "../../../UI/icons/ArrowLeftIcon";
-import ArrowRightIcon from "../../../UI/icons/ArrowRightIcon";
+import ArrowLeftIcon from "../../../../../UI/icons/ArrowLeftIcon";
+import ArrowRightIcon from "../../../../../UI/icons/ArrowRightIcon";
 import styles from "./Pagination.module.scss";
 
 export default function Pagination({
@@ -23,6 +23,7 @@ export default function Pagination({
           } button`}
           disabled={currentPage <= 1}
           onClick={() => paginate(currentPage - 1)}
+          aria-label="Previous"
         >
           <ArrowLeftIcon />
         </button>
@@ -45,6 +46,7 @@ export default function Pagination({
           } button`}
           disabled={currentPage === pageNumbers.length}
           onClick={() => paginate(currentPage + 1)}
+          aria-label="Next"
         >
           <ArrowRightIcon />
         </button>

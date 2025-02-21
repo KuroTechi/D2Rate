@@ -1,5 +1,5 @@
 import styles from "./Info.module.scss";
-import DateIcon from "../../../UI/icons/DateIcon";
+import DateIcon from "../../../../../../UI/icons/DateIcon";
 
 export default function Info({ title, date, prize }) {
   return (

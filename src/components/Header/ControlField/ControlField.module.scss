@@ -23,6 +23,13 @@
     border-radius: var(--border-radius);
     outline: none;
     transition-duration: var(--transition-duration);
+    appearance: none;
+
+    &::-webkit-search-cancel-button {
+        -webkit-appearance: none;
+        appearance: none;
+        display: none;
+    }
 
     &::placeholder {
         font-weight: 400;

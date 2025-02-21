@@ -1,4 +1,4 @@
-@use "../../../../styles/helpers" as *;
+@use "../../../../../../styles/helpers" as *;
 
 .header {
     display: flex;
@@ -16,6 +16,7 @@
 }
 .button {
     font-size: fluid(18, 14);
+    cursor: pointer;
     @include hover {
         background-color: var(--divider-medium);
     }

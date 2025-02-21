@@ -1,0 +1,8 @@
+@use "../../../../styles/helpers" as *;
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    row-gap: fluid(42, 24);
+    margin-top: fluid(40, 24);
+}

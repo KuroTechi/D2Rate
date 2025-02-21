@@ -1,5 +1,6 @@
 const DateIcon = ({ className }) => (
   <svg
+    aria-hidden="true"
     className={className}
     width="24"
     height="24"

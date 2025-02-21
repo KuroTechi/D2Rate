@@ -3,9 +3,9 @@
 .image {
     border: var(--card-image-border);
     border-radius: rem(12);
-    max-width: 100%; // Делаем изображение адаптивным
-    height: auto; // Сохраняем пропорции
-    user-select: none; /* Запрещает выделение текста */
-    -webkit-user-select: none;
-    -moz-user-select: none;
+    max-height: rem(112);
+    width: 100%;
+    object-fit: cover;
+    height: auto;
+    user-select: none;
 }

@@ -1,28 +1,24 @@
 @use "../../../styles/helpers" as *;
 
-.container {
+.wrapper {
     position: relative;
-    max-height: rem(475);
-    &::after {
-        content: "";
-        position: absolute;
-        inset: 0;
-        background: linear-gradient(90deg, #000 0%, rgba(0, 0, 0, 0) 20%, rgba(0, 0, 0, 0) 80%, #000 100%);
-        pointer-events: none;
-        z-index: 1;
-    }
-    &::before {
-        content: "";
-        position: absolute;
-        inset: 0;
-        background: linear-gradient(0deg, #000 0%, rgb(0 0 0 / 0%) 38%);
-        pointer-events: none;
-        z-index: 1;
-    }
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    color: var(--text-light);
+    font-weight: 800;
+}
+.title {
+    font-size: fluid(50, 30);
+    text-transform: uppercase;
 }
 
-.img {
-    height: 100%;
-    object-position: 20% 50%;
-    object-fit: cover;
+.icon {
+    user-select: none;
+    fill: var(--text-light);
+    height: fluid(60, 30);
+    width: fluid(60, 30);
+    @include mobile {
+        display: none;
+    }
 }

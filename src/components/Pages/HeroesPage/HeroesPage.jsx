@@ -7,9 +7,7 @@ export default function HeroesPage() {
   return (
     <>
       <Header />
-      <main className={styles.main}>
-        <Heroes />
-      </main>
+      <Heroes />
       <Footer />
     </>
   );

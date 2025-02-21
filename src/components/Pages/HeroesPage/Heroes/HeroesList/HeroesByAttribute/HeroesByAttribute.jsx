@@ -17,16 +17,18 @@ export default function HeroesByAttribute({ title, heroes = [] }) {
         <img
           className={styles.image}
           src={imageUrl}
-          alt={title || "Attribute Image"}
+          alt=""
+          aria-hidden="true"
         />
-        <span className={styles.title}>{title}</span>
+        <h2 className={styles.title}>{title}</h2>
       </div>
-      <div className={styles.list}>
+      <div className={styles.list} role="list">
         {heroes.map((hero) => (
           <HeroCard
             heroInGameName={hero.shortName}
             heroFullName={hero.displayName}
             key={`heroes-list-${hero.id}-${hero.shortName}-${hero.displayName}`}
+            role="listitem"
           />
         ))}
       </div>

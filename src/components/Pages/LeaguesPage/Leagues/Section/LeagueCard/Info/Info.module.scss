@@ -16,6 +16,10 @@
     padding: rem(9) fluid(14, 9);
     font-size: fluid(18, 14);
     line-height: fluid(18, 14);
+    & h3 {
+        font-size: inherit;
+        line-height: inherit;
+    }
 }
 .body {
     display: flex;

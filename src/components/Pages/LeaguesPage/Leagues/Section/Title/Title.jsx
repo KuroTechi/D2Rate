@@ -5,7 +5,7 @@ export default function Title({ title, icon, isButtonNotActive }) {
     <header className={styles.header}>
       <div className={styles.title}>
         {icon}
-        <span>{title}</span>
+        <h2>{title}</h2>
       </div>
 
       <a

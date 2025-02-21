@@ -10,9 +10,14 @@
     display: inline-flex;
     column-gap: fluid(12, 9);
     font-size: fluid(18, 15);
-    font-weight: 500;
+    line-height: fluid(18, 15);
+    font-weight: 700;
     color: var(--text-light);
     align-items: center;
+    & h2 {
+        font-size: inherit;
+        line-height: inherit;
+    }
 }
 .button {
     font-size: fluid(18, 14);

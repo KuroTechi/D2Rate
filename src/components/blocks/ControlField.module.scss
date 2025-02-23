@@ -1,29 +1,29 @@
-@use "../../../styles/helpers" as *;
-
+@use "../../styles/helpers" as *;
 .wrapper {
-    position: relative;
     display: flex;
     align-items: center;
-
-    @include tablet {
-        width: 100%;
-        max-width: rem(560);
-    }
+    font-size: fluid(16, 14);
+    line-height: fluid(16, 14);
+    font-weight: 600;
+    max-height: rem(42);
+    position: relative;
+    background: var(--divider-medium);
+    border-radius: var(--border-radius);
+    color: var(--text-light);
 }
 
 .input {
-    font-size: rem(16);
-    font-weight: 600;
-    width: 100%;
-    height: rem(42);
-    color: var(--text-light);
-    padding: rem(9) rem(12) rem(9) rem(44);
-    background: var(--divider-medium);
-    border: rem(2) solid transparent;
-    border-radius: var(--border-radius);
-    outline: none;
     transition-duration: var(--transition-duration);
+    padding: rem(8) rem(8) rem(8) rem(40);
+    border-radius: inherit;
+    border: rem(2) solid transparent;
+    outline: none;
+    border-radius: inherit;
+    background: inherit;
     appearance: none;
+    max-height: inherit;
+    color: inherit;
+    width: 100%;
 
     &::-webkit-search-cancel-button {
         -webkit-appearance: none;
@@ -33,7 +33,7 @@
 
     &::placeholder {
         font-weight: 400;
-        font-size: rem(17);
+        font-size: fluid(16, 14);
     }
 
     &:focus {
@@ -47,7 +47,7 @@
 }
 .icon {
     position: absolute;
-    left: rem(12);
+    left: rem(8);
     top: 50%;
     transform: translateY(-50%);
     color: var(--text-placeholder);

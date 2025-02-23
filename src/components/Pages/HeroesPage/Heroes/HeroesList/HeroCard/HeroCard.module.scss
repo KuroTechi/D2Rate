@@ -8,8 +8,9 @@
     cursor: pointer;
     border-radius: rem(4);
     background: rgb(20 20 20);
-    box-shadow: rgb(100 100 100 / 50%) 0px 0px 4px;
 
+    box-shadow: rgb(100 100 100 / 50%) 0px 0px 4px;
+    transition: opacity var(--transition-duration) ease-in-out;
     @include hover {
         transform: scale(1.8);
         z-index: 99;
@@ -32,4 +33,9 @@
     filter: grayscale(0.3);
     border-radius: inherit;
     pointer-events: none;
+}
+.disabled {
+    opacity: 0.2;
+    pointer-events: none;
+    user-select: none;
 }

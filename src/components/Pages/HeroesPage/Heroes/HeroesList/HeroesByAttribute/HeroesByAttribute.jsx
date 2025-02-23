@@ -1,15 +1,18 @@
 import styles from "./HeroesByAttribute.module.scss";
 import HeroCard from "../HeroCard/HeroCard.jsx";
+import React from "react";
 
-export default function HeroesByAttribute({ title, heroes = [] }) {
+function HeroesByAttribute({ title, heroes = [], searchQuery = "" }) {
   const images = {
     Strength: "str",
     Agility: "agi",
     Intelligence: "int",
     Universal: "all",
   };
-
   const imageUrl = `https://cdn.stratz.com/images/dota2/primary_attributes/${images[title]}.png`;
+
+  const trimmedQuery = searchQuery.trim().toLowerCase();
+  const isQueryEmpty = trimmedQuery === "";
 
   return (
     <div className={styles.heroes}>
@@ -29,9 +32,15 @@ export default function HeroesByAttribute({ title, heroes = [] }) {
             heroFullName={hero.displayName}
             key={`heroes-list-${hero.id}-${hero.shortName}-${hero.displayName}`}
             role="listitem"
+            isMatch={
+              isQueryEmpty ||
+              hero.displayName.toLowerCase().includes(trimmedQuery)
+            }
           />
         ))}
       </div>
     </div>
   );
 }
+
+export default React.memo(HeroesByAttribute);

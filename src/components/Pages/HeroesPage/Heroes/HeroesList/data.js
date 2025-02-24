@@ -10,6 +10,7 @@ const query = {
           stats: {
             primaryAttribute: "agi",
           },
+          aliases: ["am", "wei"],
         },
         {
           id: 2,
@@ -19,6 +20,7 @@ const query = {
           stats: {
             primaryAttribute: "str",
           },
+          aliases: [],
         },
         {
           id: 3,
@@ -28,6 +30,7 @@ const query = {
           stats: {
             primaryAttribute: "all",
           },
+          aliases: [],
         },
         {
           id: 4,
@@ -37,6 +40,7 @@ const query = {
           stats: {
             primaryAttribute: "agi",
           },
+          aliases: ["bs"],
         },
         {
           id: 5,
@@ -46,6 +50,7 @@ const query = {
           stats: {
             primaryAttribute: "int",
           },
+          aliases: ["cm", "rylai", "wolf"],
         },
         {
           id: 6,
@@ -55,6 +60,7 @@ const query = {
           stats: {
             primaryAttribute: "agi",
           },
+          aliases: ["Traxex"],
         },
         {
           id: 7,
@@ -64,6 +70,7 @@ const query = {
           stats: {
             primaryAttribute: "str",
           },
+          aliases: ["es", "Raigor"],
         },
         {
           id: 8,
@@ -73,6 +80,7 @@ const query = {
           stats: {
             primaryAttribute: "agi",
           },
+          aliases: ["Yurnero"],
         },
         {
           id: 9,
@@ -82,6 +90,7 @@ const query = {
           stats: {
             primaryAttribute: "agi",
           },
+          aliases: ["Princess", "Moon", "potm"],
         },
         {
           id: 10,
@@ -91,6 +100,7 @@ const query = {
           stats: {
             primaryAttribute: "agi",
           },
+          aliases: [],
         },
         {
           id: 11,
@@ -100,6 +110,7 @@ const query = {
           stats: {
             primaryAttribute: "agi",
           },
+          aliases: ["sf", "nevermore"],
         },
         {
           id: 12,
@@ -109,6 +120,7 @@ const query = {
           stats: {
             primaryAttribute: "agi",
           },
+          aliases: ["pl", "Azwraith"],
         },
         {
           id: 13,
@@ -118,6 +130,7 @@ const query = {
           stats: {
             primaryAttribute: "int",
           },
+          aliases: ["Faerie Dragon", "fd"],
         },
         {
           id: 14,
@@ -127,6 +140,7 @@ const query = {
           stats: {
             primaryAttribute: "str",
           },
+          aliases: ["Toy Butcher"],
         },
         {
           id: 15,
@@ -136,6 +150,7 @@ const query = {
           stats: {
             primaryAttribute: "agi",
           },
+          aliases: ["Lightning Revenant"],
         },
         {
           id: 16,
@@ -145,6 +160,7 @@ const query = {
           stats: {
             primaryAttribute: "all",
           },
+          aliases: ["sk", "Crixalis"],
         },
         {
           id: 17,
@@ -154,6 +170,7 @@ const query = {
           stats: {
             primaryAttribute: "int",
           },
+          aliases: ["ss", "raijin", "thunderkeg"],
         },
         {
           id: 18,
@@ -163,6 +180,7 @@ const query = {
           stats: {
             primaryAttribute: "str",
           },
+          aliases: ["Rogue Knight"],
         },
         {
           id: 19,
@@ -172,6 +190,7 @@ const query = {
           stats: {
             primaryAttribute: "str",
           },
+          aliases: ["Stone Giant"],
         },
         {
           id: 20,
@@ -181,6 +200,7 @@ const query = {
           stats: {
             primaryAttribute: "agi",
           },
+          aliases: ["vs", "Shendelzare"],
         },
         {
           id: 21,
@@ -190,6 +210,7 @@ const query = {
           stats: {
             primaryAttribute: "all",
           },
+          aliases: ["wr", "Lyralei"],
         },
         {
           id: 22,
@@ -199,6 +220,7 @@ const query = {
           stats: {
             primaryAttribute: "int",
           },
+          aliases: ["Lord of Heaven"],
         },
         {
           id: 23,
@@ -208,6 +230,7 @@ const query = {
           stats: {
             primaryAttribute: "str",
           },
+          aliases: ["Admiral"],
         },
         {
           id: 25,
@@ -217,6 +240,7 @@ const query = {
           stats: {
             primaryAttribute: "int",
           },
+          aliases: ["slayer"],
         },
         {
           id: 26,
@@ -226,6 +250,7 @@ const query = {
           stats: {
             primaryAttribute: "int",
           },
+          aliases: ["Demon Witch"],
         },
         {
           id: 27,
@@ -235,6 +260,7 @@ const query = {
           stats: {
             primaryAttribute: "int",
           },
+          aliases: ["ss", "Rhasta"],
         },
         {
           id: 28,
@@ -244,6 +270,7 @@ const query = {
           stats: {
             primaryAttribute: "str",
           },
+          aliases: ["Slithereen Guard"],
         },
         {
           id: 29,
@@ -253,6 +280,7 @@ const query = {
           stats: {
             primaryAttribute: "str",
           },
+          aliases: ["th", "Leviathan"],
         },
         {
           id: 30,
@@ -262,6 +290,7 @@ const query = {
           stats: {
             primaryAttribute: "int",
           },
+          aliases: ["wd", "Zharvakko"],
         },
         {
           id: 31,
@@ -271,6 +300,7 @@ const query = {
           stats: {
             primaryAttribute: "int",
           },
+          aliases: ["Ethreain"],
         },
         {
           id: 32,
@@ -280,6 +310,7 @@ const query = {
           stats: {
             primaryAttribute: "agi",
           },
+          aliases: ["Stealth Assassin", "sa"],
         },
         {
           id: 33,
@@ -289,6 +320,7 @@ const query = {
           stats: {
             primaryAttribute: "all",
           },
+          aliases: [],
         },
         {
           id: 34,
@@ -298,6 +330,7 @@ const query = {
           stats: {
             primaryAttribute: "int",
           },
+          aliases: ["Boush"],
         },
         {
           id: 35,
@@ -307,6 +340,7 @@ const query = {
           stats: {
             primaryAttribute: "agi",
           },
+          aliases: ["Kardel Sharpeye"],
         },
         {
           id: 36,
@@ -316,6 +350,7 @@ const query = {
           stats: {
             primaryAttribute: "int",
           },
+          aliases: ["Rotundjere"],
         },
         {
           id: 37,
@@ -325,6 +360,7 @@ const query = {
           stats: {
             primaryAttribute: "int",
           },
+          aliases: ["wl", "Demnok Lannik"],
         },
         {
           id: 38,
@@ -334,6 +370,7 @@ const query = {
           stats: {
             primaryAttribute: "all",
           },
+          aliases: ["bm"],
         },
         {
           id: 39,
@@ -343,6 +380,7 @@ const query = {
           stats: {
             primaryAttribute: "int",
           },
+          aliases: ["qop", "Akasha"],
         },
         {
           id: 40,
@@ -352,6 +390,7 @@ const query = {
           stats: {
             primaryAttribute: "all",
           },
+          aliases: ["Lesale"],
         },
         {
           id: 41,
@@ -361,6 +400,7 @@ const query = {
           stats: {
             primaryAttribute: "agi",
           },
+          aliases: ["fv"],
         },
         {
           id: 42,
@@ -370,6 +410,7 @@ const query = {
           stats: {
             primaryAttribute: "str",
           },
+          aliases: ["sk", "snk", "wk", "skeleton", "one true king", "Ostarion"],
         },
         {
           id: 43,
@@ -379,6 +420,7 @@ const query = {
           stats: {
             primaryAttribute: "all",
           },
+          aliases: ["dp", "Krobelus"],
         },
         {
           id: 44,
@@ -388,6 +430,7 @@ const query = {
           stats: {
             primaryAttribute: "agi",
           },
+          aliases: ["pa", "mortred"],
         },
         {
           id: 45,
@@ -397,6 +440,7 @@ const query = {
           stats: {
             primaryAttribute: "int",
           },
+          aliases: [],
         },
         {
           id: 46,
@@ -406,6 +450,7 @@ const query = {
           stats: {
             primaryAttribute: "agi",
           },
+          aliases: ["ta", "Lanaya"],
         },
         {
           id: 47,
@@ -415,6 +460,7 @@ const query = {
           stats: {
             primaryAttribute: "agi",
           },
+          aliases: ["Netherdrake"],
         },
         {
           id: 48,
@@ -424,6 +470,7 @@ const query = {
           stats: {
             primaryAttribute: "agi",
           },
+          aliases: ["Moon Rider"],
         },
         {
           id: 49,
@@ -433,6 +480,7 @@ const query = {
           stats: {
             primaryAttribute: "str",
           },
+          aliases: ["dk", "davion", "dragon's blood"],
         },
         {
           id: 50,
@@ -442,6 +490,7 @@ const query = {
           stats: {
             primaryAttribute: "all",
           },
+          aliases: [],
         },
         {
           id: 51,
@@ -451,6 +500,7 @@ const query = {
           stats: {
             primaryAttribute: "str",
           },
+          aliases: ["Rattletrap", "cw"],
         },
         {
           id: 52,
@@ -460,6 +510,7 @@ const query = {
           stats: {
             primaryAttribute: "int",
           },
+          aliases: ["ts"],
         },
         {
           id: 53,
@@ -469,6 +520,7 @@ const query = {
           stats: {
             primaryAttribute: "all",
           },
+          aliases: ["np"],
         },
         {
           id: 54,
@@ -478,6 +530,7 @@ const query = {
           stats: {
             primaryAttribute: "str",
           },
+          aliases: ["ls", "Naix"],
         },
         {
           id: 55,
@@ -487,6 +540,7 @@ const query = {
           stats: {
             primaryAttribute: "int",
           },
+          aliases: ["ds", "Ishkafel"],
         },
         {
           id: 56,
@@ -496,6 +550,7 @@ const query = {
           stats: {
             primaryAttribute: "agi",
           },
+          aliases: [],
         },
         {
           id: 57,
@@ -505,6 +560,7 @@ const query = {
           stats: {
             primaryAttribute: "str",
           },
+          aliases: ["Purist Thunderwrath"],
         },
         {
           id: 58,
@@ -514,6 +570,7 @@ const query = {
           stats: {
             primaryAttribute: "int",
           },
+          aliases: ["Aiushtha"],
         },
         {
           id: 59,
@@ -523,6 +580,7 @@ const query = {
           stats: {
             primaryAttribute: "str",
           },
+          aliases: [],
         },
         {
           id: 60,
@@ -532,6 +590,7 @@ const query = {
           stats: {
             primaryAttribute: "str",
           },
+          aliases: ["ns", "Balanar"],
         },
         {
           id: 61,
@@ -541,6 +600,7 @@ const query = {
           stats: {
             primaryAttribute: "agi",
           },
+          aliases: ["bm", "Arachnia"],
         },
         {
           id: 62,
@@ -550,6 +610,7 @@ const query = {
           stats: {
             primaryAttribute: "agi",
           },
+          aliases: ["bh"],
         },
         {
           id: 63,
@@ -559,6 +620,7 @@ const query = {
           stats: {
             primaryAttribute: "agi",
           },
+          aliases: ["nw", "Skitskurr"],
         },
         {
           id: 64,
@@ -568,6 +630,7 @@ const query = {
           stats: {
             primaryAttribute: "int",
           },
+          aliases: ["thd", "twin headed dragon"],
         },
         {
           id: 65,
@@ -577,6 +640,7 @@ const query = {
           stats: {
             primaryAttribute: "all",
           },
+          aliases: ["br"],
         },
         {
           id: 66,
@@ -586,6 +650,7 @@ const query = {
           stats: {
             primaryAttribute: "int",
           },
+          aliases: ["Holy Knight"],
         },
         {
           id: 67,
@@ -595,6 +660,7 @@ const query = {
           stats: {
             primaryAttribute: "all",
           },
+          aliases: ["Mercurial"],
         },
         {
           id: 68,
@@ -604,6 +670,7 @@ const query = {
           stats: {
             primaryAttribute: "int",
           },
+          aliases: ["aa"],
         },
         {
           id: 69,
@@ -613,6 +680,7 @@ const query = {
           stats: {
             primaryAttribute: "str",
           },
+          aliases: ["db"],
         },
         {
           id: 70,
@@ -622,6 +690,7 @@ const query = {
           stats: {
             primaryAttribute: "agi",
           },
+          aliases: ["Ulfsaar"],
         },
         {
           id: 71,
@@ -631,6 +700,7 @@ const query = {
           stats: {
             primaryAttribute: "str",
           },
+          aliases: ["sb", "Barathrum"],
         },
         {
           id: 72,
@@ -640,6 +710,7 @@ const query = {
           stats: {
             primaryAttribute: "agi",
           },
+          aliases: ["Aurel"],
         },
         {
           id: 73,
@@ -649,6 +720,7 @@ const query = {
           stats: {
             primaryAttribute: "str",
           },
+          aliases: ["Razzil"],
         },
         {
           id: 74,
@@ -658,6 +730,7 @@ const query = {
           stats: {
             primaryAttribute: "int",
           },
+          aliases: ["kid"],
         },
         {
           id: 75,
@@ -667,6 +740,7 @@ const query = {
           stats: {
             primaryAttribute: "int",
           },
+          aliases: ["Nortrom"],
         },
         {
           id: 76,
@@ -676,6 +750,7 @@ const query = {
           stats: {
             primaryAttribute: "int",
           },
+          aliases: ["od", "Harbinger"],
         },
         {
           id: 77,
@@ -685,6 +760,7 @@ const query = {
           stats: {
             primaryAttribute: "str",
           },
+          aliases: ["Banehallow", "wolf"],
         },
         {
           id: 78,
@@ -694,6 +770,7 @@ const query = {
           stats: {
             primaryAttribute: "all",
           },
+          aliases: ["bm", "Mangix"],
         },
         {
           id: 79,
@@ -703,6 +780,7 @@ const query = {
           stats: {
             primaryAttribute: "int",
           },
+          aliases: ["sd"],
         },
         {
           id: 80,
@@ -712,6 +790,7 @@ const query = {
           stats: {
             primaryAttribute: "agi",
           },
+          aliases: ["ld", "bear", "Sylla"],
         },
         {
           id: 81,
@@ -721,6 +800,7 @@ const query = {
           stats: {
             primaryAttribute: "str",
           },
+          aliases: ["ck"],
         },
         {
           id: 82,
@@ -730,6 +810,7 @@ const query = {
           stats: {
             primaryAttribute: "agi",
           },
+          aliases: ["geomancer", "meepwn"],
         },
         {
           id: 83,
@@ -739,6 +820,7 @@ const query = {
           stats: {
             primaryAttribute: "str",
           },
+          aliases: [],
         },
         {
           id: 84,
@@ -748,6 +830,7 @@ const query = {
           stats: {
             primaryAttribute: "str",
           },
+          aliases: ["om"],
         },
         {
           id: 85,
@@ -757,6 +840,7 @@ const query = {
           stats: {
             primaryAttribute: "str",
           },
+          aliases: ["Dirge"],
         },
         {
           id: 86,
@@ -766,6 +850,7 @@ const query = {
           stats: {
             primaryAttribute: "int",
           },
+          aliases: ["rubick"],
         },
         {
           id: 87,
@@ -775,6 +860,7 @@ const query = {
           stats: {
             primaryAttribute: "int",
           },
+          aliases: ["disruptor"],
         },
         {
           id: 88,
@@ -784,6 +870,7 @@ const query = {
           stats: {
             primaryAttribute: "all",
           },
+          aliases: ["na"],
         },
         {
           id: 89,
@@ -793,6 +880,7 @@ const query = {
           stats: {
             primaryAttribute: "agi",
           },
+          aliases: ["naga", "Slithice"],
         },
         {
           id: 90,
@@ -802,6 +890,7 @@ const query = {
           stats: {
             primaryAttribute: "int",
           },
+          aliases: ["keeper", "ezalor", "kotl"],
         },
         {
           id: 91,
@@ -811,6 +900,7 @@ const query = {
           stats: {
             primaryAttribute: "all",
           },
+          aliases: ["wisp"],
         },
         {
           id: 92,
@@ -820,6 +910,7 @@ const query = {
           stats: {
             primaryAttribute: "all",
           },
+          aliases: ["visage", "Necrolic"],
         },
         {
           id: 93,
@@ -829,6 +920,7 @@ const query = {
           stats: {
             primaryAttribute: "agi",
           },
+          aliases: ["slark"],
         },
         {
           id: 94,
@@ -838,6 +930,7 @@ const query = {
           stats: {
             primaryAttribute: "agi",
           },
+          aliases: ["medusa", "gorgon"],
         },
         {
           id: 95,
@@ -847,6 +940,7 @@ const query = {
           stats: {
             primaryAttribute: "agi",
           },
+          aliases: ["troll", "jahrakal"],
         },
         {
           id: 96,
@@ -856,6 +950,7 @@ const query = {
           stats: {
             primaryAttribute: "str",
           },
+          aliases: ["centaur"],
         },
         {
           id: 97,
@@ -865,6 +960,7 @@ const query = {
           stats: {
             primaryAttribute: "all",
           },
+          aliases: ["magnataur", "magnus"],
         },
         {
           id: 98,
@@ -874,6 +970,7 @@ const query = {
           stats: {
             primaryAttribute: "str",
           },
+          aliases: ["Rizzrack", "Shredder", "Timbersaw"],
         },
         {
           id: 99,
@@ -883,6 +980,7 @@ const query = {
           stats: {
             primaryAttribute: "str",
           },
+          aliases: ["Rigwarl", "bb"],
         },
         {
           id: 100,
@@ -892,6 +990,7 @@ const query = {
           stats: {
             primaryAttribute: "str",
           },
+          aliases: ["Ymir"],
         },
         {
           id: 101,
@@ -901,6 +1000,7 @@ const query = {
           stats: {
             primaryAttribute: "int",
           },
+          aliases: ["sm", "Dragonus"],
         },
         {
           id: 102,
@@ -910,6 +1010,7 @@ const query = {
           stats: {
             primaryAttribute: "all",
           },
+          aliases: ["Abaddon"],
         },
         {
           id: 103,
@@ -919,6 +1020,7 @@ const query = {
           stats: {
             primaryAttribute: "str",
           },
+          aliases: ["TC", "Cairne", "et"],
         },
         {
           id: 104,
@@ -928,6 +1030,7 @@ const query = {
           stats: {
             primaryAttribute: "str",
           },
+          aliases: ["Tresdin", "Legion", "lc"],
         },
         {
           id: 105,
@@ -937,6 +1040,7 @@ const query = {
           stats: {
             primaryAttribute: "all",
           },
+          aliases: ["Squee", "Spleen", "Spoon"],
         },
         {
           id: 106,
@@ -946,6 +1050,7 @@ const query = {
           stats: {
             primaryAttribute: "agi",
           },
+          aliases: ["Xin", "Ember", "es"],
         },
         {
           id: 107,
@@ -955,6 +1060,7 @@ const query = {
           stats: {
             primaryAttribute: "str",
           },
+          aliases: ["es", "Kaolin", "Earth"],
         },
         {
           id: 108,
@@ -964,6 +1070,7 @@ const query = {
           stats: {
             primaryAttribute: "str",
           },
+          aliases: ["PitLord", "Azgalor", "ul"],
         },
         {
           id: 109,
@@ -973,6 +1080,7 @@ const query = {
           stats: {
             primaryAttribute: "agi",
           },
+          aliases: ["tb"],
         },
         {
           id: 110,
@@ -982,6 +1090,7 @@ const query = {
           stats: {
             primaryAttribute: "str",
           },
+          aliases: ["ph"],
         },
         {
           id: 111,
@@ -991,6 +1100,7 @@ const query = {
           stats: {
             primaryAttribute: "int",
           },
+          aliases: ["ora", "Nerif"],
         },
         {
           id: 112,
@@ -1000,6 +1110,7 @@ const query = {
           stats: {
             primaryAttribute: "int",
           },
+          aliases: ["ww", "Auroth"],
         },
         {
           id: 113,
@@ -1009,6 +1120,7 @@ const query = {
           stats: {
             primaryAttribute: "all",
           },
+          aliases: ["zet", "aw"],
         },
         {
           id: 114,
@@ -1018,6 +1130,7 @@ const query = {
           stats: {
             primaryAttribute: "agi",
           },
+          aliases: ["mk", "Sun Wukong"],
         },
         {
           id: 119,
@@ -1027,6 +1140,7 @@ const query = {
           stats: {
             primaryAttribute: "int",
           },
+          aliases: ["dw", "Mireska"],
         },
         {
           id: 120,
@@ -1036,6 +1150,7 @@ const query = {
           stats: {
             primaryAttribute: "all",
           },
+          aliases: ["ar"],
         },
         {
           id: 121,
@@ -1045,6 +1160,7 @@ const query = {
           stats: {
             primaryAttribute: "int",
           },
+          aliases: ["gs"],
         },
         {
           id: 123,
@@ -1054,6 +1170,7 @@ const query = {
           stats: {
             primaryAttribute: "agi",
           },
+          aliases: ["squirrel", "hw"],
         },
         {
           id: 126,
@@ -1063,6 +1180,7 @@ const query = {
           stats: {
             primaryAttribute: "all",
           },
+          aliases: ["Void", "VS", "Inai"],
         },
         {
           id: 128,
@@ -1072,6 +1190,7 @@ const query = {
           stats: {
             primaryAttribute: "all",
           },
+          aliases: ["snap", "mortimer"],
         },
         {
           id: 129,
@@ -1081,6 +1200,7 @@ const query = {
           stats: {
             primaryAttribute: "str",
           },
+          aliases: ["mars"],
         },
         {
           id: 131,
@@ -1090,6 +1210,7 @@ const query = {
           stats: {
             primaryAttribute: "int",
           },
+          aliases: ["rm", "marionetto", "cogliostro"],
         },
         {
           id: 135,
@@ -1099,6 +1220,7 @@ const query = {
           stats: {
             primaryAttribute: "str",
           },
+          aliases: ["Dawnbreaker", "Valora"],
         },
         {
           id: 136,
@@ -1108,6 +1230,7 @@ const query = {
           stats: {
             primaryAttribute: "all",
           },
+          aliases: [],
         },
         {
           id: 137,
@@ -1117,6 +1240,7 @@ const query = {
           stats: {
             primaryAttribute: "str",
           },
+          aliases: ["pb"],
         },
         {
           id: 138,
@@ -1126,6 +1250,7 @@ const query = {
           stats: {
             primaryAttribute: "int",
           },
+          aliases: [],
         },
         {
           id: 145,
@@ -1135,10 +1260,10 @@ const query = {
           stats: {
             primaryAttribute: "agi",
           },
+          aliases: ["bird samurai", "kestrel"],
         },
       ],
     },
   },
 };
-
 export { query };

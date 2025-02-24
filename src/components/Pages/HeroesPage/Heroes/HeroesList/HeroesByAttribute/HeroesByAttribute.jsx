@@ -19,9 +19,15 @@ function HeroesByAttribute({ title, heroes = [], searchQuery = "" }) {
 
   const filteredHeroes =
     isMobile && !isQueryEmpty
-      ? heroes.filter((hero) =>
-          hero.displayName.toLowerCase().includes(trimmedQuery)
-        )
+      ? heroes.filter((hero) => {
+          const matchesDispalyName = hero.displayName
+            .toLowerCase()
+            .includes(trimmedQuery);
+          const matchesAliases = hero.aliases.some((alias) =>
+            alias.toLowerCase().includes(trimmedQuery)
+          );
+          return matchesDispalyName || matchesAliases;
+        })
       : heroes;
 
   if (isMobile && filteredHeroes.length === 0) {
@@ -48,7 +54,10 @@ function HeroesByAttribute({ title, heroes = [], searchQuery = "" }) {
             role="listitem"
             isMatch={
               isQueryEmpty ||
-              hero.displayName.toLowerCase().includes(trimmedQuery)
+              hero.displayName.toLowerCase().includes(trimmedQuery) ||
+              hero.aliases.some((alias) =>
+                alias.toLowerCase().includes(trimmedQuery)
+              )
             }
           />
         ))}

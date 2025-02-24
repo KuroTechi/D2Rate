@@ -1,8 +1,14 @@
 import styles from "./HeroesByAttribute.module.scss";
 import HeroCard from "../HeroCard/HeroCard.jsx";
 import React from "react";
+import useMediaQuery from "../../../../../../utils/Hooks/MatchMedia.jsx";
 
 function HeroesByAttribute({ title, heroes = [], searchQuery = "" }) {
+  const isMobile = useMediaQuery("(max-width: 767.98px)");
+
+  const trimmedQuery = searchQuery.trim().toLowerCase();
+  const isQueryEmpty = trimmedQuery === "";
+
   const images = {
     Strength: "str",
     Agility: "agi",
@@ -11,8 +17,16 @@ function HeroesByAttribute({ title, heroes = [], searchQuery = "" }) {
   };
   const imageUrl = `https://cdn.stratz.com/images/dota2/primary_attributes/${images[title]}.png`;
 
-  const trimmedQuery = searchQuery.trim().toLowerCase();
-  const isQueryEmpty = trimmedQuery === "";
+  const filteredHeroes =
+    isMobile && !isQueryEmpty
+      ? heroes.filter((hero) =>
+          hero.displayName.toLowerCase().includes(trimmedQuery)
+        )
+      : heroes;
+
+  if (isMobile && filteredHeroes.length === 0) {
+    return null;
+  }
 
   return (
     <div className={styles.heroes}>
@@ -26,7 +40,7 @@ function HeroesByAttribute({ title, heroes = [], searchQuery = "" }) {
         <h2 className={styles.title}>{title}</h2>
       </div>
       <div className={styles.list} role="list">
-        {heroes.map((hero) => (
+        {filteredHeroes.map((hero) => (
           <HeroCard
             heroInGameName={hero.shortName}
             heroFullName={hero.displayName}

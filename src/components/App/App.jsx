@@ -1,12 +1,13 @@
-import HeroesPage from "../Pages/HeroesPage/HeroesPage";
-import LeaguesPage from "../Pages/LeaguesPage/LeaguesPage";
-import MainPage from "../Pages/MainPage/MainPage";
+import Footer from "../Footer/Footer";
+import Header from "../Header/Header";
+import { Outlet } from "react-router";
 
 function App() {
   return (
     <>
-      <HeroesPage />
-      {/* <LeaguesPage /> */}
+      <Header />
+      <Outlet />
+      <Footer />
     </>
   );
 }

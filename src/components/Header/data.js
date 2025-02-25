@@ -1,6 +1,7 @@
 const navigationItems = [
   {
     value: "Heroes",
+    path: "/heroes",
     iconLeft: "heroes",
     iconRight: "arrowDown",
     submenu: [
@@ -20,6 +21,7 @@ const navigationItems = [
   },
   {
     value: "Players",
+    path: "/players",
     iconLeft: "players",
     iconRight: "arrowDown",
     submenu: [
@@ -43,6 +45,7 @@ const navigationItems = [
   },
   {
     value: "Matches",
+    path: "/matches",
     iconLeft: "matches",
     iconRight: "arrowDown",
     submenu: [
@@ -58,6 +61,7 @@ const navigationItems = [
   },
   {
     value: "Leagues",
+    path: "/leagues",
     iconLeft: "leagues",
     iconRight: "arrowDown",
     submenu: [

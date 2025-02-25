@@ -1,6 +1,8 @@
 import styles from "./Item.module.scss";
-
+import { useLocation } from "react-router";
 import Icon from "../../UI/Icon";
+import { useMemo } from "react";
+import { Submenu } from "./Submenu/Submenu";
 
 const Item = ({
   item,
@@ -10,10 +12,18 @@ const Item = ({
   isActive,
   isTablet,
 }) => {
+  const location = useLocation();
+
+  const isRouteActive = useMemo(() => {
+    return location.pathname === item.path;
+  }, [location.pathname, item.path]);
+
   return (
     <>
       <li
-        className={`${styles["item"]} ${isActive ? styles["is-active"] : ""}`}
+        className={`${styles.item} ${isActive ? styles["is-active"] : ""} ${
+          isRouteActive ? styles["is-active-route"] : ""
+        } `}
         onMouseEnter={onMouseEnter}
         onMouseLeave={onMouseLeave}
         onClick={onClick}
@@ -29,7 +39,7 @@ const Item = ({
             className={`${styles["item__icon--left"]} icon`}
           />
         )}
-        <span className={styles["item__text"]}>{item.value}</span>
+        <span className={styles.text}>{item.value}</span>
         {item.iconRight && (
           <Icon
             name={item.iconRight}
@@ -37,31 +47,13 @@ const Item = ({
           />
         )}
         {!isTablet && item.submenu && isActive && (
-          <SubMenu id={`submenu-${item.value}`} submenu={item.submenu} />
+          <Submenu id={`submenu-${item.value}`} submenu={item.submenu} />
         )}
       </li>
       {isTablet && item.submenu && isActive && (
-        <SubMenu id={`submenu-${item.value}`} submenu={item.submenu} />
+        <Submenu id={`submenu-${item.value}`} submenu={item.submenu} />
       )}
     </>
-  );
-};
-
-const SubMenu = ({ submenu }) => {
-  return (
-    <ul className={`${styles["submenu"]}`}>
-      {submenu.map((subItem) => (
-        <li
-          onClick={() => console.log(subItem.text)}
-          className={`${styles["submenu__item"]}`}
-          key={subItem.text}
-        >
-          <a className={`${styles["submenu__item-link"]}`} href={subItem.link}>
-            {subItem.text}
-          </a>
-        </li>
-      ))}
-    </ul>
   );
 };
 

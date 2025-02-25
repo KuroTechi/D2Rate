@@ -16,4 +16,11 @@ const useMediaQuery = (query) => {
   return matches;
 };
 
-export default useMediaQuery;
+const media = {
+  laptop: "(max-width:1440.98px)",
+  tablet: "(max-width:1140.98px)",
+  mobile: "(max-width:767.98px)",
+  mobileSmall: "(max-width:375.98px)",
+};
+
+export { useMediaQuery, media };

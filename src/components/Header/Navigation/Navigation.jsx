@@ -1,8 +1,7 @@
 import styles from "./Navigation.module.scss";
 import Item from "../Item/Item.jsx";
-import useMediaQuery from "../../../utils/Hooks/MatchMedia";
+import { useMediaQuery, media } from "../../../utils/Hooks/MatchMedia";
 import { useState } from "react";
-import { media } from "../data.js";
 
 const Navigation = ({ items }) => {
   const [isActive, setIsActive] = useState(null);

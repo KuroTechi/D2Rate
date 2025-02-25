@@ -1,10 +1,13 @@
 import styles from "./HeroesByAttribute.module.scss";
 import HeroCard from "../HeroCard/HeroCard.jsx";
 import React from "react";
-import useMediaQuery from "../../../../../../utils/Hooks/MatchMedia.jsx";
+import {
+  useMediaQuery,
+  media,
+} from "../../../../../../utils/Hooks/MatchMedia.jsx";
 
 function HeroesByAttribute({ title, heroes = [], searchQuery = "" }) {
-  const isMobile = useMediaQuery("(max-width: 767.98px)");
+  const isMobile = useMediaQuery(media.mobile);
 
   const trimmedQuery = searchQuery.trim().toLowerCase();
   const isQueryEmpty = trimmedQuery === "";
@@ -48,6 +51,8 @@ function HeroesByAttribute({ title, heroes = [], searchQuery = "" }) {
       <div className={styles.list} role="list">
         {filteredHeroes.map((hero) => (
           <HeroCard
+            id={hero.id}
+            winRate={hero.winRate}
             heroInGameName={hero.shortName}
             heroFullName={hero.displayName}
             key={`heroes-list-${hero.id}-${hero.shortName}-${hero.displayName}`}

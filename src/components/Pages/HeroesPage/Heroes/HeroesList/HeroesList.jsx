@@ -4,6 +4,7 @@ import debounce from "lodash/debounce";
 import { query } from "./data";
 import { useState, useMemo, useEffect } from "react";
 import ControlField from "../../../../blocks/ControlField";
+import HeroesBestWinrateByPosition from "./HeroesBestWinrateByPosition/HeroesBestWinrateByPostion";
 export default function HeroesList() {
   const [inputValue, setInputValue] = useState("");
   const [searchQuery, setSearchQuery] = useState("");
@@ -38,6 +39,7 @@ export default function HeroesList() {
   return (
     <div className={styles.wrapper}>
       <div className={`${styles.container} container`}>
+        <HeroesBestWinrateByPosition />
         <ControlField
           className={styles.input}
           placeholder="Search by heroes"

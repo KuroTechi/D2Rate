@@ -1,0 +1,125 @@
+@use "../../../../../../../styles/helpers" as *;
+.card {
+    position: relative;
+    background: rgba(255, 255, 255, 0.04);
+    border-radius: rem(4);
+    cursor: pointer;
+    transition-duration: var(--transition-duration);
+    @include hover {
+        background-color: rgba(255, 255, 255, 0.08);
+    }
+    &:nth-child(2) {
+        .background {
+            background-image: var(--gradient-bg-light-blue);
+        }
+    }
+    &:nth-child(3) {
+        .background {
+            background-image: var(--gradient-bg-yellow);
+        }
+    }
+    &:nth-child(4) {
+        .background {
+            background-image: var(--gradient-bg-orange-red);
+        }
+    }
+    &:nth-child(5) {
+        .background {
+            background-image: var(--gradient-bg-dark-green);
+        }
+    }
+}
+.background {
+    position: absolute;
+    object-fit: cover;
+    opacity: 0.3;
+    z-index: -1;
+    pointer-events: none;
+    background-image: var(--gradient-bg-blue);
+    height: 100%;
+    width: 100%;
+    border-radius: inherit;
+}
+.preview {
+    position: absolute;
+    right: rem(10);
+    width: rem(140);
+    height: rem(140);
+}
+.image {
+    object-fit: cover;
+    @include laptop {
+        position: absolute;
+        top: rem(-16);
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+        width: rem(32);
+        height: rem(32);
+        image-rendering: pixelated;
+    }
+}
+.card > svg {
+    position: absolute;
+    top: rem(16);
+    right: rem(16);
+}
+.info {
+    display: flex;
+    flex-direction: column;
+    padding: rem(16);
+    height: rem(140);
+    @include laptop {
+        margin-top: rem(16);
+        height: auto;
+        padding: rem(8);
+        display: flex;
+        gap: rem(10);
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        .winrate {
+            margin-top: 0;
+            font-size: rem(14);
+        }
+    }
+    @include mobile {
+        flex-direction: column;
+    }
+    @include mobile-s {
+        flex-direction: row;
+    }
+}
+
+.lane {
+    font-size: rem(12);
+    line-height: rem(16);
+    font-weight: 500;
+}
+.hero {
+    font-size: rem(16);
+    font-weight: 800;
+    line-height: rem(20);
+    color: var(--text-light);
+}
+.winrate {
+    font-size: rem(18);
+    font-weight: 800;
+    color: var(--color-green);
+    margin-top: rem(8);
+    white-space: nowrap;
+}
+.text {
+    font-size: rem(12);
+    line-height: rem(16);
+    font-weight: 500;
+}
+
+.divider {
+    position: absolute;
+    background: rgba(255, 255, 255, 0.04);
+    bottom: 0;
+    width: 100%;
+    height: rem(16);
+    z-index: -1;
+}

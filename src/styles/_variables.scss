@@ -14,6 +14,13 @@
 
     --pages-title-bg: linear-gradient(135deg, #717171, #404040);
 
+    --gradient-bg-blue: linear-gradient(to left, rgb(94, 111, 207), rgb(65, 82, 164));
+    --gradient-bg-light-blue: linear-gradient(to left, rgb(41, 149, 163), rgb(50, 131, 143));
+    --gradient-bg-yellow: linear-gradient(to left, rgb(210, 127, 25), rgb(167, 102, 17));
+    --gradient-bg-orange-red: linear-gradient(to left, rgb(175, 97, 24), rgb(203, 58, 118));
+    --gradient-bg-dark-green: linear-gradient(to left, rgb(84, 160, 129), rgb(16, 127, 86));
+
+    --color-green: rgb(42, 203, 79);
     --card-image-border: #{rem(1) solid var(--divider-medium)};
     --card-default-font-size: #{fluid(16, 14)};
     --card-default-line-height: #{fluid(16, 14)};

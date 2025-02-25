@@ -81,8 +81,4 @@ const navigationItems = [
   },
 ];
 
-const media = {
-  tablet: "(max-width:1140.98px)",
-};
-
-export { navigationItems, media };
+export { navigationItems };

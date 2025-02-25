@@ -5,9 +5,9 @@ import Actions from "./Actions/Actions.jsx";
 import BurgerButton from "./BurgerButton/BurgerButton.jsx";
 import UserProfileAvatar from "./UserProfileLink/UserProfileLink.jsx";
 import ControlField from "../blocks/ControlField.jsx";
-import { media, navigationItems } from "./data.js";
+import { navigationItems } from "./data.js";
 import { useEffect, useState } from "react";
-import useMediaQuery from "../../utils/Hooks/MatchMedia.jsx";
+import { useMediaQuery, media } from "../../utils/Hooks/MatchMedia.jsx";
 
 export default function Header() {
   const [isOpenOverlay, setIsOpenOverlay] = useState(false);

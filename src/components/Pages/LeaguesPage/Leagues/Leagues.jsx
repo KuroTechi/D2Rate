@@ -89,6 +89,7 @@ export default function Leagues() {
     <main>
       <section className={styles.leagues} aria-labelledby="leagues">
         <Header
+          className={styles.background}
           title={"leagues"}
           icon={
             <LeaguesIcon className="icon icon--extra-large icon--fill-white decorative" />

@@ -7,6 +7,7 @@ export default function Heroes() {
     <main>
       <section className={styles.heroes} aria-labelledby="heroes">
         <Header
+          className={styles.background}
           title={"heroes"}
           icon={
             <HeroesIcon className="icon icon--extra-large icon--fill-white" />

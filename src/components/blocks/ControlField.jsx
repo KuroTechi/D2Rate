@@ -12,7 +12,7 @@ const ControlField = ({
   onChange,
 }) => {
   return (
-    <div className={`${styles.wrapper} ${className}`}>
+    <div className={`${styles.wrapper} ${className} border`}>
       <SearchIcon className={styles.icon} />
       <input
         className={styles.input}

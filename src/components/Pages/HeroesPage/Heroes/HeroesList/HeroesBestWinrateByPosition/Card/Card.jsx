@@ -22,7 +22,7 @@ const Card = ({ heroName, shortName, position, winRate, icon }) => {
     );
 
   return (
-    <div className={styles.card}>
+    <div className={`${styles.card} border`}>
       <div className={styles.background}></div>
       <div className={styles.preview}>
         <img

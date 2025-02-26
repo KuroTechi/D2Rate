@@ -9,6 +9,8 @@
     border-radius: fluid(9, 6);
     border: none;
     transition-duration: 0.4s;
+    cursor: pointer;
+    white-space: nowrap;
 
     &--not-active {
         opacity: 0.3;

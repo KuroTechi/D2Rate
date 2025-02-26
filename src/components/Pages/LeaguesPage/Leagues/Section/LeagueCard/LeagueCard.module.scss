@@ -1,9 +1,9 @@
 @use "../../../../../../styles/helpers" as *;
 
 .card {
+    position: relative;
     cursor: pointer;
     border-radius: rem(16);
-    border: rem(1) solid var(--divider-medium);
     color: var(--text-light);
     font-weight: 600;
     padding-bottom: fluid(10, 6);

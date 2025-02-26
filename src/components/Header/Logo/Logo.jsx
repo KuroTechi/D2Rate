@@ -2,9 +2,9 @@ import styles from "./Logo.module.scss";
 
 const Logo = () => {
   return (
-    <a href="/" aria-label="Home" title="Home">
+    <a className={styles.link} href="/" aria-label="Home" title="Home">
       <img
-        className={styles.logo}
+        className={styles.image}
         src="/logo.svg"
         alt=""
         width="47"

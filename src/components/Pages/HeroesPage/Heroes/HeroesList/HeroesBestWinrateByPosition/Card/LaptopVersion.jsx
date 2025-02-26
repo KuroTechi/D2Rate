@@ -1,6 +1,6 @@
 const LaptopVersion = ({ heroImage, winRate, icon, heroName, styles }) => {
   return (
-    <div className={styles.card}>
+    <div className={`${styles.card} border`}>
       <div className={styles.background}></div>
       <img
         className={styles.image}

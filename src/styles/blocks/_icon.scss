@@ -1,6 +1,14 @@
 @use "../helpers" as *;
 
 .icon {
+    &--small {
+        width: rem(16);
+        height: rem(16);
+    }
+    &--default {
+        width: rem(22);
+        height: rem(22);
+    }
     &--medium {
         width: fluid(24, 15);
         height: fluid(24, 15);
@@ -27,6 +35,12 @@
     }
     &--fill-white {
         fill: white;
+    }
+    &--fill-light-white {
+        fill: var(--text-light);
+    }
+    &--fill-red {
+        fill: rgb(223, 78, 78);
     }
     &--interactive {
         transition-duration: 0.3s;

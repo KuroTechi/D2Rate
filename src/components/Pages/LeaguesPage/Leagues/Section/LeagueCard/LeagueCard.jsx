@@ -5,7 +5,7 @@ import Info from "./Info/Info";
 export default function LeagueCard({ item }) {
   return (
     <a className={styles.link}>
-      <div className={styles.card}>
+      <div className={`${styles.card} border`}>
         <img
           className={styles.image}
           src={item.image}

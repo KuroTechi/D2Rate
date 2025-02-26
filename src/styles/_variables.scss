@@ -12,7 +12,9 @@
 
     --transition-duration: 0.2s;
 
-    --pages-title-bg: linear-gradient(135deg, #717171, #404040);
+    --pages-title-bg: linear-gradient(135deg, #12361f00, #92b7d59c);
+    --pages-title-bg-leagues: linear-gradient(135deg, #611c4e, #0db873ad);
+    --pages-title-bg-error: linear-gradient(-100deg, #0b0a0a, rgb(223 78 78 / 40%));
 
     --gradient-bg-blue: linear-gradient(to left, rgb(94, 111, 207), rgb(65, 82, 164));
     --gradient-bg-light-blue: linear-gradient(to left, rgb(41, 149, 163), rgb(50, 131, 143));
@@ -33,6 +35,7 @@
     --text-placeholder: #5b5b5b;
     --text-yellow: #ffe462;
     --red-color: #de4e4d;
+    --red-warning-color: rgb(223, 78, 78);
     --divider-medium: #262626;
     --divider-dark: #1b1b1b;
     --block-light: #1b1b1b;

@@ -1,0 +1,60 @@
+@use "../../../../styles/helpers" as *;
+.background {
+    background: var(--pages-title-bg-error);
+    & h1 {
+        text-transform: none;
+    }
+}
+.container {
+    margin-top: rem(24);
+    margin-bottom: rem(24);
+}
+.body {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: rem(16);
+    background: rgba(255, 255, 255, 0.04);
+    background-color: rgba(223, 78, 78, 0.4);
+    border-radius: rem(4);
+    padding: rem(16);
+
+    @include mobile {
+        flex-direction: column;
+    }
+}
+.info {
+    display: flex;
+    flex-direction: column;
+    row-gap: rem(4);
+}
+.wrapper {
+    display: flex;
+    align-items: center;
+    column-gap: rem(10);
+}
+
+.title {
+    color: var(--text-light);
+    font-size: rem(14);
+    font-weight: 700;
+}
+.actions {
+    display: flex;
+    align-items: center;
+    gap: rem(10);
+}
+.link {
+    position: relative;
+    gap: rem(8);
+    font-weight: 700;
+    border-radius: rem(4);
+    background: rgba(255, 255, 255, 0.08);
+    text-decoration: none;
+    align-items: center;
+    text-align: center;
+
+    @include hover {
+        background: rgba(255, 255, 255, 0.12);
+    }
+}

@@ -20,7 +20,8 @@
     }
 }
 .button {
-    font-size: fluid(18, 14);
+    position: relative;
+    font-size: fluid(16, 14);
     cursor: pointer;
     @include hover {
         background-color: var(--divider-medium);

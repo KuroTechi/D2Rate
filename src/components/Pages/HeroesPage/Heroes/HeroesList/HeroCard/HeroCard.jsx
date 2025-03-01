@@ -1,17 +1,37 @@
 import styles from "./HeroCard.module.scss";
 import React from "react";
-function HeroCard({ heroInGameName, heroFullName, isMatch, id }) {
-  const baseUrl = `https://cdn.stratz.com/images/dota2/heroes/${heroInGameName}_vert.png`;
-  // console.log(id + "-id " + heroFullName + "-name ");
+import MetaHeroIcon from "../../../../../UI/icons/MetaHeroIcon";
+import { baseUrl } from "../../../../../../utils/urls/baseUrl";
+function HeroCard({
+  heroInGameName,
+  heroFullName,
+  isMatch,
+  winRate,
+  metaThreshold,
+  showMeta,
+}) {
+  const image = `${baseUrl.images.heroPicture}${heroInGameName}_vert.png`;
+
+  const isMeta = winRate > metaThreshold ? styles.meta : "";
+  const isHeroNameMatchWithQuery = isMatch ? "" : styles.disabled;
+
+  const isDisabled = showMeta ? winRate < metaThreshold : false;
 
   return (
-    <div className={`${styles.card} ${!isMatch ? styles.disabled : ""}`}>
+    <div
+      className={`${styles.card} ${isMeta} ${isHeroNameMatchWithQuery} ${
+        isDisabled ? styles.disabled : ""
+      } `}
+    >
       <img
         className={styles.image}
-        src={baseUrl}
+        src={image}
         alt={heroFullName || heroInGameName}
         loading="lazy"
       />
+      {winRate > metaThreshold ? (
+        <MetaHeroIcon className={`${styles.icon} icon icon--fill-yellow`} />
+      ) : null}
     </div>
   );
 }

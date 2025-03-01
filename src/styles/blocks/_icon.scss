@@ -42,6 +42,9 @@
     &--fill-red {
         fill: rgb(223, 78, 78);
     }
+    &--fill-yellow {
+        fill: var(--yellow-meta-color);
+    }
     &--interactive {
         transition-duration: 0.3s;
         border-radius: inherit;

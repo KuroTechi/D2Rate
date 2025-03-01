@@ -2,7 +2,7 @@ import {
   useMediaQuery,
   media,
 } from "../../../../../../../utils/Hooks/MatchMedia";
-import { baseUrl } from "../../../../../../../utils/Hooks/baseUrl";
+import { baseUrl } from "../../../../../../../utils/urls/baseUrl";
 import styles from "./Card.module.scss";
 import LaptopVersion from "./LaptopVersion";
 const Card = ({ heroName, shortName, position, winRate, icon }) => {

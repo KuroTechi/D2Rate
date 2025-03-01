@@ -4,13 +4,16 @@ import RouteErrorIcon from "../../../UI/icons/RouteErrorIcon";
 import WarningIcon from "../../../UI/icons/WarningIcon";
 import DiscordIcon from "../../../UI/icons/DiscordIcon";
 
-export default function RouteError() {
+export default function RouteError({ isCodeError, errorMessage }) {
   return (
     <main>
-      <section className={styles.notfound} aria-labelledby="Page not found">
+      <section
+        className={styles.notfound}
+        aria-labelledby={isCodeError ? "Application Error" : "Page not found"}
+      >
         <Header
           className={styles.background}
-          title={"Page not found"}
+          title={isCodeError ? "Application Error" : "Page not found"}
           icon={
             <RouteErrorIcon className="icon icon--extra-large icon--red-color" />
           }
@@ -23,8 +26,9 @@ export default function RouteError() {
                 <h2 className={styles.title}>Something went wrong</h2>
               </div>
               <span className={styles.description}>
-                The page you are trying to visit does not exist. If you think
-                this page should exist, please give us to know on Discord.
+                {isCodeError
+                  ? `An error occurred in the application: ${errorMessage}. Please report this issue on Discord.`
+                  : "The page you are trying to visit does not exist. If you think this page should exist, please give us to know on Discord."}
               </span>
             </div>
             <div className={styles.actions}>

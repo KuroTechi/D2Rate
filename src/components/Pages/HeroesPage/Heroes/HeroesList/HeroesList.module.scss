@@ -10,13 +10,45 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: rem(24);
-
     @include laptop {
         grid-template-columns: repeat(1, 1fr);
     }
 }
-.input {
+.actions {
+    display: flex;
     align-self: center;
     margin-bottom: rem(24);
+    column-gap: rem(10);
+}
+.input {
     max-width: rem(240);
+    background: var(--block-medium);
+}
+.button {
+    height: rem(40);
+    width: rem(40);
+    position: relative;
+    padding: 0;
+    background: var(--block-medium);
+    span {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 100%;
+    }
+
+    @include hover {
+        background: var(--background-dark-medium);
+    }
+}
+.active {
+    .icon {
+        fill: var(--yellow-meta-color);
+    }
+}
+.icon {
+    width: rem(16);
+    height: rem(16);
+    fill: var(--background-dark-medium);
 }

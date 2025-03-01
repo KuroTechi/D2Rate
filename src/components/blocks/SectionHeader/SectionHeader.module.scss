@@ -1,9 +1,8 @@
-@use "../../../../../styles/helpers" as *;
+@use "../../../styles/helpers" as *;
 
 .wrapper {
     display: flex;
     justify-content: center;
-    background: var(--pages-title-bg);
 }
 .header {
     display: flex;
@@ -28,7 +27,7 @@
 .title {
     color: white;
     font-size: fluid(32, 18);
-    text-transform: capitalize;
+    text-transform: none;
     line-height: fluid(32, 18);
     font-weight: 700;
 }

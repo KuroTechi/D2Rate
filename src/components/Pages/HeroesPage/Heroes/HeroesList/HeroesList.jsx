@@ -3,7 +3,7 @@ import HeroesByAttribute from "./HeroesByAttribute/HeroesByAttribute";
 import debounce from "lodash/debounce";
 import { query, heroesWeekStats } from "./data";
 import { useState, useMemo, useEffect } from "react";
-import ControlField from "../../../../blocks/ControlField";
+import ControlField from "../../../../blocks/ControlField/ControlField";
 import HeroesBestWinrateByPosition from "./HeroesBestWinrateByPosition/HeroesBestWinrateByPosition";
 import MetaHeroIcon from "../../../../UI/icons/MetaHeroIcon";
 export default function HeroesList() {

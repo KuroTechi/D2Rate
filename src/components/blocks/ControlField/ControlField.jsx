@@ -1,5 +1,5 @@
 import styles from "./ControlField.module.scss";
-import SearchIcon from "../UI/icons/SearchIcon";
+import SearchIcon from "../../UI/icons/SearchIcon";
 
 const ControlField = ({
   className,

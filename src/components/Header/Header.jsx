@@ -4,7 +4,7 @@ import Navigation from "./Navigation/Navigation.jsx";
 import Actions from "./Actions/Actions.jsx";
 import BurgerButton from "./BurgerButton/BurgerButton.jsx";
 import UserProfileAvatar from "./UserProfileLink/UserProfileLink.jsx";
-import ControlField from "../blocks/ControlField.jsx";
+import ControlField from "../blocks/ControlField/ControlField.jsx";
 import { navigationItems } from "./data.js";
 import { useEffect, useState } from "react";
 import { useMediaQuery, media } from "../../utils/Hooks/MatchMedia.jsx";

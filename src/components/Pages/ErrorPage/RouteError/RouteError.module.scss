@@ -1,9 +1,6 @@
 @use "../../../../styles/helpers" as *;
 .background {
     background: var(--pages-title-bg-error);
-    & h1 {
-        text-transform: none;
-    }
 }
 .container {
     margin-top: rem(24);

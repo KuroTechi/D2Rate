@@ -1,4 +1,4 @@
-import Header from "../../HeroesPage/Heroes/Header/Header";
+import SectionHeader from "../../../blocks/SectionHeader/SectionHeader";
 import styles from "./Leagues.module.scss";
 import LeaguesIcon from "../../../UI/icons/LeaguesIcon";
 import Section from "./Section/Section";
@@ -88,9 +88,10 @@ export default function Leagues() {
   return (
     <main>
       <section className={styles.leagues} aria-labelledby="leagues">
-        <Header
+        <SectionHeader
           className={styles.background}
-          title={"leagues"}
+          title={"Leagues"}
+          id={"leagues"}
           icon={
             <LeaguesIcon className="icon icon--extra-large icon--fill-white decorative" />
           }

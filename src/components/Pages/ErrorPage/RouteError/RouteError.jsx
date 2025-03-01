@@ -1,5 +1,5 @@
 import styles from "./RouteError.module.scss";
-import Header from "../../HeroesPage/Heroes/Header/Header";
+import SectionHeader from "../../../blocks/SectionHeader/SectionHeader";
 import RouteErrorIcon from "../../../UI/icons/RouteErrorIcon";
 import WarningIcon from "../../../UI/icons/WarningIcon";
 import DiscordIcon from "../../../UI/icons/DiscordIcon";
@@ -9,11 +9,12 @@ export default function RouteError({ isCodeError, errorMessage }) {
     <main>
       <section
         className={styles.notfound}
-        aria-labelledby={isCodeError ? "Application Error" : "Page not found"}
+        aria-labelledby={isCodeError ? "applicationError" : "pageNotFound"}
       >
-        <Header
+        <SectionHeader
           className={styles.background}
           title={isCodeError ? "Application Error" : "Page not found"}
+          id={isCodeError ? "applicationError" : "pageNotFound"}
           icon={
             <RouteErrorIcon className="icon icon--extra-large icon--red-color" />
           }

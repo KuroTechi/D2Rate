@@ -78,6 +78,7 @@ export default function HeroesList() {
   const handleShowMeta = () => {
     setShowMeta((prev) => !prev);
   };
+
   return (
     <div className={styles.wrapper}>
       <div className={`${styles.container} container`}>

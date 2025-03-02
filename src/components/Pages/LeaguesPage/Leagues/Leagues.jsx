@@ -1,11 +1,11 @@
-import SectionHeader from "../../../blocks/SectionHeader/SectionHeader";
 import styles from "./Leagues.module.scss";
+import Section from "../../../blocks/Section/Section";
+import SectionHeader from "../../../blocks/SectionHeader/SectionHeader";
 import LeaguesIcon from "../../../UI/icons/LeaguesIcon";
-import Section from "./Section/Section";
+import LeaguesList from "./LeaguesList/LeaguesList";
 import OngoingIcon from "../../../UI/icons/OngoingIcon";
 import UpcomingIcon from "../../../UI/icons/UpcomingIcon";
 import CompletedIcon from "../../../UI/icons/CompletedIcon";
-import OngoingMainCompetition from "../../../OngoingMainCompetition/OngoingMainCompetition";
 
 export default function Leagues() {
   const one = [
@@ -87,7 +87,7 @@ export default function Leagues() {
   ];
   return (
     <main>
-      <section className={styles.leagues} aria-labelledby="leagues">
+      <Section className={styles.leagues} aria-labelledby="leagues">
         <SectionHeader
           className={styles.background}
           title={"Leagues"}
@@ -97,23 +97,23 @@ export default function Leagues() {
           }
         />
         <div className={`${styles.wrapper} container`}>
-          <Section
+          <LeaguesList
             title={"Ongoing"}
             icon={<OngoingIcon className="icon--large icon--green-color" />}
             items={one}
           />
-          <Section
+          <LeaguesList
             title={"Upcoming"}
             icon={<UpcomingIcon className="icon--large icon--yellow-color" />}
             items={two}
           />
-          <Section
+          <LeaguesList
             title={"Completed"}
             icon={<CompletedIcon className="icon--large icon--default-color" />}
             items={three}
           />
         </div>
-      </section>
+      </Section>
     </main>
   );
 }

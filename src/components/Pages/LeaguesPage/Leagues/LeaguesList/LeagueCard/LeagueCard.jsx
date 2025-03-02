@@ -1,5 +1,4 @@
 import styles from "./LeagueCard.module.scss";
-
 import Info from "./Info/Info";
 
 export default function LeagueCard({ item }) {

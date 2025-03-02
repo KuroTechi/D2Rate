@@ -1,11 +1,12 @@
-import SectionHeader from "../../../blocks/SectionHeader/SectionHeader";
 import styles from "./Heroes.module.scss";
+import Section from "../../../blocks/Section/Section";
+import SectionHeader from "../../../blocks/SectionHeader/SectionHeader";
 import HeroesIcon from "../../../UI/icons/HeroesIcon";
 import HeroesList from "./HeroesList/HeroesList";
 export default function Heroes() {
   return (
     <main>
-      <section className={styles.heroes} aria-labelledby="heroes">
+      <Section className={styles.heroes} aria-labelledby="heroes">
         <SectionHeader
           className={styles.background}
           title={"Heroes"}
@@ -15,7 +16,7 @@ export default function Heroes() {
           }
         />
         <HeroesList />
-      </section>
+      </Section>
     </main>
   );
 }

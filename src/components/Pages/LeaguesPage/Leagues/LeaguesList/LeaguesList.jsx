@@ -1,11 +1,11 @@
-import styles from "./Section.module.scss";
+import styles from "./LeaguesList.module.scss";
 
 import Title from "./Title/Title";
 import LeagueCard from "./LeagueCard/LeagueCard";
 import Pagination from "./Pagination/Pagination";
 import { useState, useRef, useEffect } from "react";
 
-export default function Section({ title, icon, items }) {
+export default function LeaguesList({ title, icon, items }) {
   const [currentPage, setCurrentPage] = useState(1);
   const [isMounted, setIsMounted] = useState(false);
   const sectionRef = useRef(null);

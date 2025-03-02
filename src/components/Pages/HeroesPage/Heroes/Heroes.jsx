@@ -6,7 +6,7 @@ import HeroesList from "./HeroesList/HeroesList";
 export default function Heroes() {
   return (
     <main>
-      <Section className={styles.heroes} aria-labelledby="heroes">
+      <Section className={styles.heroes} ariaLabelledBy="heroes">
         <SectionHeader
           className={styles.background}
           title={"Heroes"}

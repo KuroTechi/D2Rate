@@ -87,7 +87,7 @@ export default function Leagues() {
   ];
   return (
     <main>
-      <Section className={styles.leagues} aria-labelledby="leagues">
+      <Section className={styles.leagues} ariaLabelledBy="leagues">
         <SectionHeader
           className={styles.background}
           title={"Leagues"}

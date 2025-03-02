@@ -10,7 +10,7 @@ export default function RouteError({ isCodeError, errorMessage }) {
     <main>
       <Section
         className={styles.notfound}
-        aria-labelledby={isCodeError ? "applicationError" : "pageNotFound"}
+        ariaLabelledBy={isCodeError ? "applicationError" : "pageNotFound"}
       >
         <SectionHeader
           className={styles.background}

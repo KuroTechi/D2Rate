@@ -6,10 +6,12 @@
     display: flex;
     flex-direction: row;
     align-items: flex-end;
-    padding: rem(9);
     border-radius: rem(9);
     z-index: 1;
     cursor: pointer;
+    text-decoration: none;
+    color: inherit;
+    padding: rem(10);
 
     @include hover {
         color: var(--text-light);
@@ -46,12 +48,22 @@
         cursor: pointer;
     }
 
-    &::after {
-        content: "";
-        position: absolute;
-        top: 100%;
-        left: 0;
-        width: 100%;
-        height: rem(9); // Высота пробела
+    @include tablet-above {
+        &::after {
+            content: "";
+            position: absolute;
+            top: 100%;
+            left: 0;
+            width: 100%;
+            height: rem(10);
+        }
+        &::before {
+            content: "";
+            position: absolute;
+            bottom: 100%;
+            left: 0;
+            width: 100%;
+            height: rem(10);
+        }
     }
 }

@@ -1,5 +1,5 @@
 import styles from "./Item.module.scss";
-import { useLocation } from "react-router";
+import { Link, useLocation } from "react-router";
 import Icon from "../../UI/Icon";
 import { useMemo } from "react";
 import { Submenu } from "./Submenu/Submenu";
@@ -12,27 +12,16 @@ const Item = ({
   isActive,
   isTablet,
 }) => {
-  const location = useLocation();
-
-  const isRouteActive = useMemo(() => {
-    return location.pathname === item.path;
-  }, [location.pathname, item.path]);
-
   return (
-    <>
-      <li
-        className={`${styles.item} ${isActive ? styles["is-active"] : ""} ${
-          isRouteActive ? styles["is-active-route"] : ""
-        } `}
-        onMouseEnter={onMouseEnter}
-        onMouseLeave={onMouseLeave}
-        onClick={onClick}
-        onFocus={onMouseEnter}
-        onBlur={onMouseLeave}
-        tabIndex="0"
-        aria-expanded={isActive}
-        aria-controls={`submenu-${item.value}`}
-      >
+    <li
+      className={styles.wrapper}
+      onFocus={onMouseEnter}
+      onMouseEnter={onMouseEnter}
+      onMouseLeave={onMouseLeave}
+      onBlur={onMouseLeave}
+      onClick={onClick}
+    >
+      <WrapperByMediaValue isTablet={isTablet} isActive={isActive} item={item}>
         {item.iconLeft && (
           <Icon
             name={item.iconLeft}
@@ -46,14 +35,38 @@ const Item = ({
             className={`${styles["item__icon--right"]} icon`}
           />
         )}
-        {!isTablet && item.submenu && isActive && (
-          <Submenu id={`submenu-${item.value}`} submenu={item.submenu} />
-        )}
-      </li>
-      {isTablet && item.submenu && isActive && (
+      </WrapperByMediaValue>
+      {item.submenu && isActive && (
         <Submenu id={`submenu-${item.value}`} submenu={item.submenu} />
       )}
-    </>
+    </li>
+  );
+};
+
+const WrapperByMediaValue = ({ children, isTablet, isActive, item }) => {
+  const location = useLocation();
+
+  const isRouteActive = useMemo(() => {
+    return location.pathname === item.path;
+  }, [location.pathname, item.path]);
+
+  return !isTablet ? (
+    <Link
+      to={item.path}
+      className={`${styles.item} ${isActive ? styles["is-active"] : ""} ${
+        isRouteActive ? styles["is-active-route"] : ""
+      } `}
+    >
+      {children}
+    </Link>
+  ) : (
+    <div
+      className={`${styles.item} ${isActive ? styles["is-active"] : ""} ${
+        isRouteActive ? styles["is-active-route"] : ""
+      } `}
+    >
+      {children}
+    </div>
   );
 };
 

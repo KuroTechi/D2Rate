@@ -1,13 +1,17 @@
 @use "../../../styles/helpers" as *;
 
 .link {
+    display: flex;
+    column-gap: rem(6);
+    z-index: 2;
+    text-decoration: none;
+    color: var(--text-light);
     @include tablet-above {
-        margin-right: rem(20);
+        margin-right: rem(18);
     }
 }
 
 .image {
     min-width: rem(38);
     position: relative;
-    z-index: 2;
 }

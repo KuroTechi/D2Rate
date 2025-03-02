@@ -2,11 +2,16 @@ import styles from "./Navigation.module.scss";
 import Item from "../Item/Item.jsx";
 import { useMediaQuery, media } from "../../../utils/Hooks/MatchMedia";
 import { useEffect, useState } from "react";
-import { useNavigate } from "react-router";
+import { useLocation, useNavigate } from "react-router";
 const Navigation = ({ items }) => {
   const [isActive, setIsActive] = useState(null);
   const isTablet = useMediaQuery(media.tablet);
   const navigate = useNavigate();
+  const location = useLocation();
+
+  useEffect(() => {
+    setIsActive(null);
+  }, [location.pathname]);
 
   useEffect(() => {
     if (isActive !== null) {

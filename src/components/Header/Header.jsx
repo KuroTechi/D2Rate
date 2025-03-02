@@ -44,9 +44,7 @@ export default function Header() {
         />
         <Logo />
         <div
-          className={`${styles.overlay} ${
-            isOpenOverlay ? styles["is-active"] : ""
-          }`}
+          className={`${styles.overlay} ${isOpenOverlay ? styles.active : ""}`}
         >
           <Navigation items={navigationItems} />
           <ControlField className={styles.input} />

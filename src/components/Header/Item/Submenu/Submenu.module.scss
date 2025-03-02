@@ -2,13 +2,11 @@
 
 .submenu {
     position: absolute;
-    top: calc(100% + rem(9)); //учитывается высота пробела
-    left: 0;
+    top: calc(var(--header-max-height) - rem(4));
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    border: rem(1.2) solid var(--divider-medium);
-    border-radius: rem(14);
+    border-radius: rem(10);
     padding: rem(9);
     row-gap: rem(6);
     background: rgba(18, 18, 18, 0.8);
@@ -36,7 +34,7 @@
 
     @include tablet {
         &:first-child {
-            margin-top: rem(10);
+            margin-top: rem(16);
         }
     }
 

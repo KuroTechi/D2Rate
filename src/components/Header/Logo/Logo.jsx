@@ -1,8 +1,9 @@
+import { Link } from "react-router";
 import styles from "./Logo.module.scss";
 
 const Logo = () => {
   return (
-    <a className={styles.link} href="/" aria-label="Home" title="Home">
+    <Link to={"/"} className={styles.link} href="/" aria-label="Home">
       <img
         className={styles.image}
         src="/logo.svg"
@@ -10,7 +11,7 @@ const Logo = () => {
         width="47"
         height="33"
       />
-    </a>
+    </Link>
   );
 };
 

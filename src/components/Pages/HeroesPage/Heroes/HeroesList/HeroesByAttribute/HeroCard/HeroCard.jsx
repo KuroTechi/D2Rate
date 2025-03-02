@@ -1,7 +1,8 @@
 import styles from "./HeroCard.module.scss";
 import React from "react";
-import MetaHeroIcon from "../../../../../UI/icons/MetaHeroIcon";
-import { baseUrl } from "../../../../../../utils/urls/baseUrl";
+import MetaHeroIcon from "../../../../../../UI/icons/MetaHeroIcon";
+import { baseUrl } from "../../../../../../../utils/urls/baseUrl";
+
 function HeroCard({
   heroInGameName,
   heroFullName,

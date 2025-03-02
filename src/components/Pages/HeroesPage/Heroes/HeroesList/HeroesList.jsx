@@ -5,7 +5,7 @@ import { query, heroesWeekStats } from "./data";
 import { useState, useMemo, useEffect } from "react";
 import ControlField from "../../../../blocks/ControlField/ControlField";
 import HeroesBestWinrateByPosition from "./HeroesBestWinrateByPosition/HeroesBestWinrateByPosition";
-import MetaHeroIcon from "../../../../UI/icons/MetaHeroIcon";
+import ShowMetaHeroesButton from "./ShowMetaHeroesButton/ShowMetaHeroesButton";
 export default function HeroesList() {
   const [inputValue, setInputValue] = useState("");
   const [showMeta, setShowMeta] = useState(false);
@@ -92,18 +92,10 @@ export default function HeroesList() {
             value={inputValue}
             onChange={handleSearchChange}
           />
-          <button
-            className={`${styles.button} ${
-              showMeta ? styles.active : ""
-            } button border`}
-            onClick={handleShowMeta}
-            aria-label={showMeta ? "Hide meta heroes" : "Show meta heroes"}
-            aria-pressed={showMeta}
-          >
-            <span>
-              <MetaHeroIcon className={styles.icon} />
-            </span>
-          </button>
+          <ShowMetaHeroesButton
+            showMeta={showMeta}
+            handleShowMeta={handleShowMeta}
+          />
         </div>
 
         <div className={styles.list}>

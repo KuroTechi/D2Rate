@@ -1,5 +1,5 @@
 import styles from "./HeroesByAttribute.module.scss";
-import HeroCard from "../HeroCard/HeroCard.jsx";
+import HeroCard from "./HeroCard/HeroCard.jsx";
 import React, { useMemo } from "react";
 import {
   useMediaQuery,

@@ -1,8 +1,7 @@
 import styles from "./OngoingMainCompetition.module.scss";
 import Card from "./Card/Card";
-import Preview from "./Preview/Preview";
 import Divider from "../UI/Divider";
-import LeaguesIcon from "../UI/icons/LeaguesIcon";
+
 export default function OngoingMainCompetition() {
   return (
     <>

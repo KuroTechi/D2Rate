@@ -1,4 +1,3 @@
-import styles from "./SettingsButton.module.scss";
 import SettingsIcon from "../../../UI/icons/Settings";
 
 const SettingsButton = () => {

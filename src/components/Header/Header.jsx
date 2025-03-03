@@ -6,14 +6,14 @@ import BurgerButton from "./BurgerButton/BurgerButton.jsx";
 import UserProfileAvatar from "./UserProfileLink/UserProfileLink.jsx";
 import ControlField from "../blocks/ControlField/ControlField.jsx";
 import { navigationItems } from "./data.js";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { useMediaQuery, media } from "../../utils/Hooks/MatchMedia.jsx";
 
 export default function Header() {
   const [isOpenOverlay, setIsOpenOverlay] = useState(false);
   const isTablet = useMediaQuery(media.tablet);
   const selector = "is-lock";
-  const htmlElement = document.documentElement;
+  const htmlElementRef = useRef(document.documentElement);
 
   const handleClickOpenOverlay = () => {
     setIsOpenOverlay(!isOpenOverlay);
@@ -21,6 +21,7 @@ export default function Header() {
 
   useEffect(() => {
     if (!isOpenOverlay) return;
+    const htmlElement = htmlElementRef.current;
     htmlElement.classList.add(selector);
 
     return () => {
@@ -29,9 +30,9 @@ export default function Header() {
   }, [isOpenOverlay]);
 
   useEffect(() => {
-    if (!isTablet && htmlElement.classList.contains(selector)) {
+    if (!isTablet && htmlElementRef.current.classList.contains(selector)) {
       setIsOpenOverlay(false);
-      htmlElement.classList.remove(selector);
+      htmlElementRef.current.classList.remove(selector);
     }
   }, [isTablet]);
 

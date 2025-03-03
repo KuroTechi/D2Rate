@@ -2,7 +2,10 @@ import { Component } from "react";
 import ErrorPage from "../components/Pages/ErrorPage/ErrorPage";
 
 class ErrorBoundary extends Component {
-  state = { error: null };
+  constructor(props) {
+    super(props);
+    this.state = { error: null };
+  }
 
   static getDerivedStateFromError(error) {
     return { error };

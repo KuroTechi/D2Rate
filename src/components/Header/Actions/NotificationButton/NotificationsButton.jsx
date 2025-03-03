@@ -1,4 +1,3 @@
-import styles from "./NotificationsButton.module.scss";
 import NotificationsIcon from "../../../UI/icons/NotificationsIcon";
 
 const NotificationsButton = () => {

@@ -26,7 +26,7 @@ function HeroesByAttribute({ title, heroes = [], searchQuery = "", showMeta }) {
   const matchesQuery = (hero, searchQuery) => {
     const trimmedQuery = searchQuery.trim().toLowerCase();
     return (
-      isQueryEmpty ||
+      trimmedQuery === "" ||
       hero.displayName.toLowerCase().includes(trimmedQuery) ||
       hero.aliases.some((alias) => alias.toLowerCase().includes(trimmedQuery))
     );
@@ -43,7 +43,7 @@ function HeroesByAttribute({ title, heroes = [], searchQuery = "", showMeta }) {
       result = result.filter((hero) => matchesQuery(hero, searchQuery));
     }
     return result;
-  }, [heroes, searchQuery, showMeta, isMobile]);
+  }, [heroes, searchQuery, showMeta, isMobile, isQueryEmpty]);
 
   if (isMobile && filteredHeroes.length === 0) return null;
 

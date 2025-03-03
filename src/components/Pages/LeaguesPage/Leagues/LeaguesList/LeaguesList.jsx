@@ -3,11 +3,11 @@ import styles from "./LeaguesList.module.scss";
 import Title from "./Title/Title";
 import LeagueCard from "./LeagueCard/LeagueCard";
 import Pagination from "./Pagination/Pagination";
-import { useState, useRef, useEffect } from "react";
+import { useState, useRef } from "react";
 
 export default function LeaguesList({ title, icon, items }) {
   const [currentPage, setCurrentPage] = useState(1);
-  const [isMounted, setIsMounted] = useState(false);
+  // const [isMounted, setIsMounted] = useState(false);
   const sectionRef = useRef(null);
   const itemsPerPage = 8;
 
@@ -23,18 +23,14 @@ export default function LeaguesList({ title, icon, items }) {
     setCurrentPage(pageNumber);
   };
 
-  useEffect(() => {
-    if (!isMounted) {
-      setIsMounted(true);
-      return;
-    }
-    if (sectionRef.current) {
-      const offset = 20;
-      const sectionTop =
-        sectionRef.current.getBoundingClientRect().top + window.scrollY;
-      window.scrollTo({ top: sectionTop - offset, behavior: "smooth" });
-    }
-  }, [currentPage]);
+  // useEffect(() => {
+  //   if (sectionRef.current) {
+  //     const offset = 20;
+  //     const sectionTop =
+  //       sectionRef.current.getBoundingClientRect().top + window.scrollY;
+  //     window.scrollTo({ top: sectionTop - offset, behavior: "smooth" });
+  //   }
+  // }, [currentPage]);
 
   return (
     <div className={styles.section} ref={sectionRef}>
@@ -44,7 +40,7 @@ export default function LeaguesList({ title, icon, items }) {
 
       <div className={styles.list}>
         {currentItems?.map((item, index) => {
-          return <LeagueCard item={item} key={index} />;
+          return <LeagueCard item={item} key={`${title}-"league"-${index}`} />;
         })}
       </div>
 

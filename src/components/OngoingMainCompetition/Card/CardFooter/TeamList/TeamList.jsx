@@ -1,4 +1,3 @@
-import ImageNotFoundIcon from "../../../../UI/icons/ImageNotFoundIcon";
 import styles from "./TeamList.module.scss";
 
 export default function TeamsList() {
@@ -30,15 +29,6 @@ const Team = ({ image }) => {
           width="40"
           loading="lazy"
         />
-      </a>
-    </li>
-  );
-};
-const ImageNotFound = () => {
-  return (
-    <li className={styles.team}>
-      <a className={styles.link}>
-        <ImageNotFoundIcon className={styles.logo} />
       </a>
     </li>
   );

@@ -14,9 +14,7 @@ const Navigation = ({ items }) => {
   }, [location.pathname]);
 
   useEffect(() => {
-    if (isActive !== null) {
-      setIsActive(null);
-    }
+    setIsActive(null);
   }, [isTablet]);
 
   const handleClick = (index) => {

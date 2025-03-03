@@ -2,6 +2,10 @@
 
 .card {
     position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
     cursor: pointer;
     border-radius: rem(16);
     color: var(--text-light);
@@ -22,4 +26,5 @@
     width: 100%;
     object-fit: cover;
     user-select: none;
+    background-color: var(--background-dark-medium);
 }

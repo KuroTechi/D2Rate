@@ -3,6 +3,7 @@ import { Link, useLocation } from "react-router";
 import Icon from "../../UI/Icon";
 import { useMemo } from "react";
 import { Submenu } from "./Submenu/Submenu";
+import ArrowDownIcon from "../../UI/icons/ArrowDownIcon";
 
 const Item = ({
   item,
@@ -29,12 +30,7 @@ const Item = ({
           />
         )}
         <span className={styles.text}>{item.value}</span>
-        {item.iconRight && (
-          <Icon
-            name={item.iconRight}
-            className={`${styles["item__icon--right"]} icon`}
-          />
-        )}
+        <ArrowDownIcon className={`${styles["item__icon--right"]} icon`} />
       </WrapperByMediaValue>
       {item.submenu && isActive && (
         <Submenu id={`submenu-${item.value}`} submenu={item.submenu} />

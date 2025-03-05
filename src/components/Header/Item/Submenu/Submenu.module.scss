@@ -40,7 +40,7 @@
 
     @include hover {
         color: var(--text-light);
-        background: var(--divider-dark);
+        background: var(--color-dark);
         cursor: pointer;
     }
 }

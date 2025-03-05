@@ -5,7 +5,7 @@
     transition-duration: var(--transition-duration);
     display: flex;
     flex-direction: row;
-    align-items: flex-end;
+    align-items: center;
     border-radius: rem(9);
     z-index: 1;
     cursor: pointer;
@@ -13,19 +13,23 @@
     color: inherit;
     padding: rem(10);
 
-    @include hover {
-        color: var(--text-light);
-        background: var(--divider-dark);
+    .text {
+        line-height: normal;
     }
 
     &__icon {
         &--right {
+            width: rem(24);
+            height: rem(24);
             margin-left: rem(2);
+
             @include tablet {
                 margin-left: auto;
             }
         }
         &--left {
+            width: rem(24);
+            height: rem(24);
             fill: currentColor;
             margin-right: rem(12);
         }
@@ -33,7 +37,7 @@
 
     &.is-active {
         color: var(--text-light);
-        background-color: var(--divider-medium);
+        background-color: var(--color-medium-dark);
         cursor: pointer;
         @include tablet {
             .item__icon--right {
@@ -44,8 +48,13 @@
 
     &.is-active-route {
         color: var(--text-light);
-        background-color: var(--divider-medium);
+        background-color: var(--color-medium-dark);
         cursor: pointer;
+    }
+
+    @include hover {
+        color: var(--text-light);
+        background-color: var(--color-medium-dark);
     }
 
     @include tablet-above {

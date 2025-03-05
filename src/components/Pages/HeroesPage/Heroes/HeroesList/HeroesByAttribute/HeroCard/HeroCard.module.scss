@@ -1,36 +1,36 @@
 @use "../../../../../../../styles/helpers" as *;
 
 .card {
-    overflow: hidden;
     position: relative;
+    overflow: hidden;
     font-size: rem(8);
     white-space: wrap;
-    width: rem(42);
+    width: 100%;
     height: rem(60);
     cursor: pointer;
     border-radius: rem(4);
     background: rgb(20 20 20);
-    box-shadow: rgb(100 100 100 / 50%) 0px 0px 4px;
+    box-shadow: rgb(100 100 100 / 50%) 0px 0px rem(4);
     z-index: 0;
-    will-change: transform, box-shadow;
+    // will-change: transform;
     transition: opacity var(--transition-duration) ease-in-out;
 
     @include hover {
-        transform: scale(1.8);
-
-        filter: grayscale(0);
-        transform-origin: center center;
-        width: rem(42);
-        width: initial;
         z-index: 1;
         box-shadow:
-            rgb(0, 0, 0) 0px 7px 8px -4px,
-            rgb(0, 0, 0) 0px 12px 17px 2px,
-            rgb(0, 0, 0) 0px 5px 22px 4px;
+            rgb(0, 0, 0) 0px rem(7) rem(8) rem(-4),
+            rgb(0, 0, 0) 0px rem(12) rem(17) rem(2),
+            rgb(0, 0, 0) 0px rem(5) rem(22) rem(4);
+        width: initial;
+        transform: scale(1.8);
+        transform-origin: center center;
+
+        filter: grayscale(0);
     }
 }
 
 .image {
+    position: absolute;
     object-fit: cover;
     width: 100%;
     height: 100%;
@@ -52,7 +52,7 @@
         left: 0;
         width: 100%;
         height: 100%;
-        border: rem(1) solid var(--yellow-meta-color) !important;
+        border: rem(1) solid var(--color-meta-yellow) !important;
         border-radius: inherit;
         pointer-events: none;
     }

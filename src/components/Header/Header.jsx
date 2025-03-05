@@ -5,7 +5,6 @@ import Actions from "./Actions/Actions.jsx";
 import BurgerButton from "./BurgerButton/BurgerButton.jsx";
 import UserProfileAvatar from "./UserProfileLink/UserProfileLink.jsx";
 import ControlField from "../blocks/ControlField/ControlField.jsx";
-import { navigationItems } from "./data.js";
 import { useEffect, useRef, useState } from "react";
 import { useMediaQuery, media } from "../../utils/Hooks/MatchMedia.jsx";
 
@@ -47,7 +46,7 @@ export default function Header() {
         <div
           className={`${styles.overlay} ${isOpenOverlay ? styles.active : ""}`}
         >
-          <Navigation items={navigationItems} />
+          <Navigation />
           <ControlField className={styles.input} />
           <Actions />
         </div>

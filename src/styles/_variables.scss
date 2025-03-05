@@ -4,48 +4,50 @@
     --header-max-width: #{rem(1728)};
     --header-max-height: #{rem(72)};
     --header-padding-x: #{rem(24)};
-    --padding-button: 40px;
-    --container-max-width: #{rem(1490)};
+    --container-max-width: #{rem(1500)};
     --container-padding-x: #{rem(15)};
 
     --border-radius: #{rem(8)};
-    --border: #{rem(1) solid var(--text-medium)};
+    --border-width: #{rem(1)};
+    --border-color: var(--text-medium);
+    --border: var(--border-width) solid var(--border-color);
 
     --transition-duration: 0.2s;
 
-    --pages-title-bg: linear-gradient(135deg, #12361f00, #92b7d59c);
-    --pages-title-bg-leagues: linear-gradient(135deg, #611c4e, #0db873ad);
-    --pages-title-bg-error: linear-gradient(-100deg, #0b0a0a, rgb(223 78 78 / 40%));
+    --pages-title-bg: linear-gradient(135deg, rgba(18, 54, 31, 0), rgba(146, 183, 213, 0.61));
+    --pages-title-bg-leagues: linear-gradient(135deg, #611c4e, rgba(13, 184, 115, 0.68));
+    --pages-title-bg-error: linear-gradient(-100deg, #0b0a0a, rgba(223, 78, 78, 0.4));
 
-    --gradient-bg-blue: linear-gradient(to left, rgb(94, 111, 207), rgb(65, 82, 164));
-    --gradient-bg-light-blue: linear-gradient(to left, rgb(41, 149, 163), rgb(50, 131, 143));
-    --gradient-bg-yellow: linear-gradient(to left, rgb(210, 127, 25), rgb(167, 102, 17));
-    --gradient-bg-orange-red: linear-gradient(to left, rgb(175, 97, 24), rgb(203, 58, 118));
-    --gradient-bg-dark-green: linear-gradient(to left, rgb(84, 160, 129), rgb(16, 127, 86));
+    --gradient-bg-blue: linear-gradient(to left, #5e6fcf, #4152a4);
+    --gradient-bg-light-blue: linear-gradient(to left, #2995a3, #32838f);
+    --gradient-bg-yellow: linear-gradient(to left, #d27f19, #a76611);
+    --gradient-bg-orange-red: linear-gradient(to left, #af6118, #cb3a76);
+    --gradient-bg-dark-green: linear-gradient(to left, #54a081, #107f56);
 
     --color-green: rgb(42, 203, 79);
-    --card-image-border: #{rem(1) solid var(--divider-medium)};
-    --card-default-font-size: #{fluid(16, 14)};
-    --card-default-line-height: #{fluid(16, 14)};
-    --card-status-active: #73d285;
-    --card-yellow-icon: #c7b147;
-    --card-commands-hover-color: #1d1d1d;
+    --color-red: #de4e4d;
+    --color-yellow: #ffe462;
+    --color-meta-yellow: #d6af4c;
+    --color-warning-bg: rgba(223, 78, 78, 0.4);
+    --color-status-green: #73d285;
+    --color-icon-yellow: #c7b147;
+    --color-icon-red: #df4e4e;
+    --color-dark: #1b1b1b;
+    --color-medium-dark: #262626;
+    --color-white: #ffffff;
     --text-light: #cecece;
     --text-medium: #a1a1a1;
-    --text-dark: #666;
+    --text-dark: #626161;
     --text-placeholder: #5b5b5b;
-    --text-yellow: #ffe462;
-    --red-color: #de4e4d;
-    --red-warning-color: rgb(223, 78, 78);
-    --yellow-meta-color: rgb(214, 175, 76);
-    --divider-medium: #262626;
-    --divider-dark: #1b1b1b;
+
     --block-light: #1b1b1b;
     --block-medium: #141414;
     --block-dark: #0a0a0a;
-    --background-background: #000;
+
+    --background-main: #000;
     --background-dark-medium: rgba(255, 255, 255, 0.12);
     --card-background: #101010;
+
     --font-family-base: "Manrope", sans-serif;
     --font-family-accent: "Roboto", sans-serif;
 }

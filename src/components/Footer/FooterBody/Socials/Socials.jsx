@@ -5,19 +5,19 @@ import InstagramIcon from "../../../UI/icons/InstagramIcon";
 import YoutubeIcon from "../../../UI/icons/YoutubeIcon";
 export default function Socials() {
   return (
-    <div className={` ${styles["soc1als"]}`}>
-      <ul className={styles["soc1als__list"]}>
+    <div className={styles.soc1als}>
+      <ul className={styles.list}>
         <SocialsItem name={"Twitter"}>
-          <TwitterIcon />
+          <TwitterIcon className={styles.icon} />
         </SocialsItem>
         <SocialsItem name={"Facebook"}>
-          <FacebookIcon />
+          <FacebookIcon className={styles.icon} />
         </SocialsItem>
         <SocialsItem name={"Instagram"}>
-          <InstagramIcon />
+          <InstagramIcon className={styles.icon} />
         </SocialsItem>
         <SocialsItem name={"Youtube"}>
-          <YoutubeIcon />
+          <YoutubeIcon className={styles.icon} />
         </SocialsItem>
       </ul>
     </div>
@@ -26,9 +26,9 @@ export default function Socials() {
 
 const SocialsItem = ({ name, children }) => {
   return (
-    <li className={styles["soc1als__item"]}>
+    <li className={styles.item}>
       <a
-        className={styles["soc1als__link"]}
+        className={styles.link}
         href="/"
         target="_blank"
         aria-label={name}

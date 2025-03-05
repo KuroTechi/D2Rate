@@ -17,7 +17,7 @@ export default function RouteError({ isCodeError, errorMessage }) {
           title={isCodeError ? "Application Error" : "Page not found"}
           id={isCodeError ? "applicationError" : "pageNotFound"}
           icon={
-            <RouteErrorIcon className="icon icon--extra-large icon--red-color" />
+            <RouteErrorIcon className="icon icon--extra-large icon--color-red" />
           }
         />
         <div className={`${styles.container} container`}>

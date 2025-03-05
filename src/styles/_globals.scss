@@ -7,7 +7,7 @@
 }
 
 ::-webkit-scrollbar-track {
-    background-color: var(--divider-medium);
+    background-color: var(--color-medium-dark);
 }
 
 ::-webkit-scrollbar-thumb {
@@ -21,7 +21,7 @@ html {
 }
 
 html {
-    scrollbar-color: var(--text-placeholder) var(--divider-medium);
+    scrollbar-color: var(--text-placeholder) var(--color-medium-dark);
     height: 100%;
 }
 
@@ -30,7 +30,7 @@ body {
     font-family: var(--font-family-base);
     letter-spacing: 0.03em;
     color: var(--text-medium);
-    background-color: var(--background-background);
+    background-color: var(--background-main);
 }
 
 main {

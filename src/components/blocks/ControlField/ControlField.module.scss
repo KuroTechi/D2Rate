@@ -7,7 +7,7 @@
     font-weight: 600;
     max-height: rem(42);
     position: relative;
-    background: var(--divider-medium);
+    background: var(--color-medium-dark);
     border-radius: var(--border-radius);
     color: var(--text-light);
 }
@@ -37,12 +37,12 @@
     }
 
     &:focus {
-        background: var(--divider-dark);
+        background: var(--color-dark);
         border-color: var(--text-light);
     }
 
     @include hover {
-        background: var(--divider-dark);
+        background: var(--color-dark);
     }
 }
 .icon {

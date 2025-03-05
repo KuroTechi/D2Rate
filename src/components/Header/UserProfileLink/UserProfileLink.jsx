@@ -2,7 +2,7 @@ import styles from "./UserProfileLink.module.scss";
 
 const UserProfileAvatar = () => {
   return (
-    <a href="#" className={styles.link}>
+    <a href="#" className={`${styles.link} border`}>
       <img
         className={styles.image}
         src={

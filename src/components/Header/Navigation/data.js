@@ -3,7 +3,6 @@ const navigationItems = [
     value: "Heroes",
     path: "/heroes",
     iconLeft: "heroes",
-    iconRight: "arrowDown",
     submenu: [
       {
         text: "Review",
@@ -23,7 +22,6 @@ const navigationItems = [
     value: "Players",
     path: "/players",
     iconLeft: "players",
-    iconRight: "arrowDown",
     submenu: [
       {
         text: "Ranks",
@@ -47,7 +45,6 @@ const navigationItems = [
     value: "Matches",
     path: "/matches",
     iconLeft: "matches",
-    iconRight: "arrowDown",
     submenu: [
       {
         text: "Live",
@@ -63,7 +60,6 @@ const navigationItems = [
     value: "Leagues",
     path: "/leagues",
     iconLeft: "leagues",
-    iconRight: "arrowDown",
     submenu: [
       {
         text: "The International",

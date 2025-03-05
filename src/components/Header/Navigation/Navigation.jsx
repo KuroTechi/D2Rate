@@ -3,7 +3,8 @@ import Item from "../Item/Item.jsx";
 import { useMediaQuery, media } from "../../../utils/Hooks/MatchMedia";
 import { useEffect, useState } from "react";
 import { useLocation, useNavigate } from "react-router";
-const Navigation = ({ items }) => {
+import { navigationItems } from "./data.js";
+const Navigation = () => {
   const [isActive, setIsActive] = useState(null);
   const isTablet = useMediaQuery(media.tablet);
   const navigate = useNavigate();
@@ -18,7 +19,7 @@ const Navigation = ({ items }) => {
   }, [isTablet]);
 
   const handleClick = (index) => {
-    const path = items[index].path;
+    const path = navigationItems[index].path;
     if (isTablet) {
       if (isActive !== index) {
         setIsActive(index);
@@ -46,10 +47,10 @@ const Navigation = ({ items }) => {
   return (
     <nav className={styles.navigation} aria-label="Main Navigation">
       <ul className={styles.list}>
-        {items.map((item, index) => (
+        {navigationItems.map((item, index) => (
           <Item
             item={item}
-            key={item.value}
+            key={`${item.value}-${index}`}
             onMouseEnter={() => handleMouseEnter(index)}
             onMouseLeave={() => handleMouseLeave(index)}
             onClick={() => handleClick(index)}

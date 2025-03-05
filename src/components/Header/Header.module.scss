@@ -2,7 +2,7 @@
 
 .header {
     background: var(--block-medium);
-    border-bottom: rem(1) solid var(--divider-medium);
+    border-bottom: rem(1) solid var(--color-medium-dark);
     z-index: 20;
     max-height: var(--header-max-height);
 }
@@ -19,6 +19,7 @@
 }
 
 .overlay {
+    z-index: 1;
     @include tablet-above {
         display: contents;
     }
@@ -31,7 +32,7 @@
         justify-items: center;
         row-gap: rem(18);
         padding: 1rem;
-        background-color: var(--background-background);
+        background-color: var(--background-main);
         transition-duration: 0.5s;
 
         &:not(.active) {

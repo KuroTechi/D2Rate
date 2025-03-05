@@ -22,19 +22,19 @@
     color: var(--text-placeholder);
     @include hover {
         color: var(--text-light);
-        background: var(--divider-dark);
+        background: var(--color-dark);
     }
 }
 .active {
     color: var(--text-light);
 
     border-radius: rem(10);
-    background: var(--divider-medium);
+    background: var(--color-medium-dark);
     pointer-events: none;
     user-select: none;
     cursor: default;
     @include hover {
-        background: var(--divider-medium);
+        background: var(--color-medium-dark);
     }
 }
 .button {
@@ -44,6 +44,6 @@
     padding-block: fluid(10, 3);
     padding-inline: fluid(20, 6);
     @include hover {
-        background-color: var(--divider-medium);
+        background-color: var(--color-medium-dark);
     }
 }

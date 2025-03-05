@@ -21,36 +21,39 @@
         width: fluid(48, 32);
         height: fluid(48, 32);
     }
+
     &--default-color {
         color: var(--text-placeholder);
     }
     &--yellow-color {
-        color: var(--card-yellow-icon);
+        color: var(--color-icon-yellow);
     }
-    &--red-color {
-        color: var(--red-color);
+    &--color-red {
+        color: var(--color-red);
     }
     &--green-color {
-        color: var(--card-status-active);
+        color: var(--color-status-green);
     }
     &--fill-white {
-        fill: white;
+        fill: var(--color-white);
     }
     &--fill-light-white {
         fill: var(--text-light);
     }
     &--fill-red {
-        fill: rgb(223, 78, 78);
+        fill: var(--color-icon-red);
     }
     &--fill-yellow {
-        fill: var(--yellow-meta-color);
+        fill: var(--color-meta-yellow);
     }
     &--interactive {
-        transition-duration: 0.3s;
+        width: rem(42);
+        height: rem(42);
+        transition-duration: var(--transition-duration);
         border-radius: inherit;
         @include hover {
             color: var(--text-light);
-            background-color: var(--divider-medium);
+            background-color: var(--color-medium-dark);
         }
     }
 }

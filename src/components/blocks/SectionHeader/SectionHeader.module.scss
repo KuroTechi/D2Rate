@@ -18,14 +18,14 @@
     align-items: center;
     height: fluid(80, 60);
     width: fluid(80, 60);
-    background-color: var(--divider-dark);
+    background-color: var(--color-dark);
     border-radius: rem(10);
     @include mobile {
         display: none;
     }
 }
 .title {
-    color: white;
+    color: var(--color-white);
     font-size: fluid(32, 18);
     text-transform: none;
     line-height: fluid(32, 18);

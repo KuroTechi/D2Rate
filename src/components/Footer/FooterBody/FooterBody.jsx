@@ -4,8 +4,8 @@ import Socials from "./Socials/Socials";
 
 export default function FooterBody() {
   return (
-    <div className={styles["footer__body"]}>
-      <div className={`${styles["footer__body-wrapper"]} container`}>
+    <div className={styles.body}>
+      <div className={`${styles.wrapper} container`}>
         <FooterLogo />
         <Socials />
       </div>

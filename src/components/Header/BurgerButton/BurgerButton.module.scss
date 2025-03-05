@@ -1,7 +1,8 @@
 @use "../../../styles/helpers" as *;
 
 .button {
-    @include square(rem(34));
+    width: rem(34);
+    height: rem(34);
 
     display: inline-flex;
     flex-direction: column;

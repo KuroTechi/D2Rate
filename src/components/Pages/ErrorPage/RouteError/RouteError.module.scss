@@ -11,8 +11,7 @@
     justify-content: space-between;
     align-items: center;
     gap: rem(16);
-    background: rgba(255, 255, 255, 0.04);
-    background-color: rgba(223, 78, 78, 0.4);
+    background-color: var(--color-warning-bg);
     border-radius: rem(4);
     padding: rem(16);
 

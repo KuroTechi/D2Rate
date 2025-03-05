@@ -2,18 +2,22 @@
 
 .soc1als {
     display: flex;
-    &__list {
-        display: flex;
-        align-items: center;
-        column-gap: fluid(24, 12);
-    }
-    &__item {
-        display: flex;
-    }
-    &__link {
-        color: var(--text-dark);
-        @include hover {
-            color: var(--text-light);
-        }
+}
+.list {
+    display: flex;
+    align-items: center;
+    column-gap: fluid(24, 12);
+}
+.icon {
+    height: rem(26);
+    width: rem(26);
+}
+.item {
+    display: flex;
+}
+.link {
+    color: var(--text-dark);
+    @include hover {
+        color: var(--text-light);
     }
 }

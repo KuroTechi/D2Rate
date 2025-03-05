@@ -5,7 +5,7 @@ const Copyright = memo(() => {
   const currentYear = useMemo(() => new Date().getFullYear(), []);
 
   return (
-    <p className={styles["footer__copyright"]}>
+    <p className={styles.copyright}>
       © <time dateTime={currentYear.toString()}>{currentYear}</time> D2Rate.
       Inc. All rights reserved.
     </p>

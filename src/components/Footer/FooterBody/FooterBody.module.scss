@@ -1,19 +1,16 @@
 @use "../../../styles/helpers" as *;
 
-.footer {
-    &__body {
-        display: flex;
-        justify-content: center;
-        background: var(--block-dark);
-        border-bottom: rem(1) solid var(--divider-medium);
-        border-top: rem(1) solid var(--divider-medium);
-
-        &-wrapper {
-            display: flex;
-            justify-content: space-between;
-            column-gap: rem(12);
-            width: 100%;
-            padding-block: fluid(30, 15);
-        }
-    }
+.body {
+    display: flex;
+    justify-content: center;
+    background: var(--block-dark);
+    border-bottom: rem(1) solid var(--color-medium-dark);
+    border-top: rem(1) solid var(--color-medium-dark);
+}
+.wrapper {
+    display: flex;
+    justify-content: space-between;
+    column-gap: rem(12);
+    width: 100%;
+    padding-block: fluid(30, 15);
 }

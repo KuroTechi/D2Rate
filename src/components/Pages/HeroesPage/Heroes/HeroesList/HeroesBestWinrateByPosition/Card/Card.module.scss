@@ -43,10 +43,10 @@
 .preview {
     position: absolute;
     right: rem(10);
-    width: rem(140);
-    height: rem(140);
 }
 .image {
+    width: rem(140);
+    height: rem(140);
     object-fit: cover;
     @include laptop {
         position: absolute;

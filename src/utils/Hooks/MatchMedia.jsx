@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-
+import pxToRem from "../pxToRem.js";
 const useMediaQuery = (query) => {
   const [matches, setMatches] = useState(
     () => window.matchMedia(query).matches
@@ -17,10 +17,11 @@ const useMediaQuery = (query) => {
 };
 
 const media = {
-  laptop: "(max-width:1440.98px)",
-  tablet: "(max-width:1140.98px)",
-  mobile: "(max-width:767.98px)",
-  mobileSmall: "(max-width:375.98px)",
+  laptop: `(max-width:${pxToRem(1440.98)}rem)`,
+  tablet: `(max-width:${pxToRem(1140.98)}rem)`,
+
+  mobile: `(max-width:${pxToRem(767.98)}rem)`,
+  mobileSmall: `(max-width:${pxToRem(375.98)}rem)`,
 };
 
 export { useMediaQuery, media };

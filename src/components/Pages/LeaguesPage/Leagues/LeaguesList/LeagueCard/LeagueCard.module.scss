@@ -14,7 +14,7 @@
     transition-duration: var(--transition-duration);
     overflow: hidden;
     @include hover {
-        background-color: var(--divider-dark);
+        background-color: var(--color-dark);
     }
 }
 

@@ -6,6 +6,7 @@ import { useState, useMemo, useEffect } from "react";
 import ControlField from "../../../../blocks/ControlField/ControlField";
 import HeroesBestWinrateByPosition from "./HeroesBestWinrateByPosition/HeroesBestWinrateByPosition";
 import ShowMetaHeroesButton from "./ShowMetaHeroesButton/ShowMetaHeroesButton";
+import groupHeroesByAttribute from "./groupHeroesByAttribute";
 export default function HeroesList() {
   const [inputValue, setInputValue] = useState("");
   const [showMeta, setShowMeta] = useState(false);
@@ -13,54 +14,10 @@ export default function HeroesList() {
   const heroes = query.data.constants.heroes;
   const stats = heroesWeekStats.data.heroStats.winDay;
 
-  const heroesByAttribute = useMemo(() => {
-    if (!heroes || !stats || heroes.length === 0 || stats.length === 0) {
-      return { str: [], agi: [], int: [], all: [] };
-    }
-    const result = {
-      str: [],
-      agi: [],
-      int: [],
-      all: [],
-    };
-
-    const heroesStats = {};
-
-    stats.forEach((entry) => {
-      const { heroId, matchCount, winCount } = entry;
-      if (heroId === 0) return;
-      if (!heroesStats[heroId]) {
-        heroesStats[heroId] = {
-          matchCount: 0,
-          winCount: 0,
-        };
-      }
-
-      heroesStats[heroId].matchCount += matchCount;
-      heroesStats[heroId].winCount += winCount;
-    });
-
-    heroes.forEach((hero) => {
-      const heroWithWinrate = heroesStats[hero.id] || {
-        matchCount: 0,
-        winCount: 0,
-      };
-
-      const { matchCount, winCount } = heroWithWinrate;
-
-      const winRate = matchCount > 0 ? (winCount / matchCount) * 100 : 0;
-
-      result[hero.stats.primaryAttribute].push({
-        ...hero,
-        winRate: winRate,
-      });
-    });
-
-    Object.keys(result).forEach((key) =>
-      result[key].sort((a, b) => a.displayName.localeCompare(b.displayName))
-    );
-    return result;
-  }, [heroes, stats]);
+  const heroesByAttribute = useMemo(
+    () => groupHeroesByAttribute(heroes, stats),
+    [heroes, stats]
+  );
 
   const debouncedSetSearch = useMemo(() => {
     return debounce((value) => setSearchQuery(value.toLowerCase()), 300);

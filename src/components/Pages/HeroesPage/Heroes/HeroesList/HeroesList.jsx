@@ -1,18 +1,43 @@
 import styles from "./HeroesList.module.scss";
 import HeroesByAttribute from "./HeroesByAttribute/HeroesByAttribute";
 import debounce from "lodash/debounce";
-import { query, heroesWeekStats } from "./data";
 import { useState, useMemo, useEffect } from "react";
 import ControlField from "../../../../blocks/ControlField/ControlField";
 import HeroesBestWinrateByPosition from "./HeroesBestWinrateByPosition/HeroesBestWinrateByPosition";
 import ShowMetaHeroesButton from "./ShowMetaHeroesButton/ShowMetaHeroesButton";
 import groupHeroesByAttribute from "./groupHeroesByAttribute";
+import { useQuery } from "@apollo/client";
+import {
+  GET_HEROES,
+  GET_HEROES_WEEK_STATS,
+} from "../../../../../graphql/queries/heroes";
+import Spinner from "../../../../blocks/Spinner/Spinner";
+
 export default function HeroesList() {
   const [inputValue, setInputValue] = useState("");
   const [showMeta, setShowMeta] = useState(false);
   const [searchQuery, setSearchQuery] = useState("");
-  const heroes = query.data.constants.heroes;
-  const stats = heroesWeekStats.data.heroStats.winDay;
+  const {
+    data: heroesData,
+    loading: heroesLoading,
+    error: heroesError,
+  } = useQuery(GET_HEROES);
+  const {
+    data: statsData,
+    loading: statsLoading,
+    error: statsError,
+  } = useQuery(GET_HEROES_WEEK_STATS, {
+    variables: {
+      take: 7,
+      gameModeIds: "ALL_PICK_RANKED",
+    },
+  });
+
+  const heroes = useMemo(
+    () => heroesData?.constants?.heroes || [],
+    [heroesData]
+  );
+  const stats = useMemo(() => statsData?.heroStats?.winDay || [], [statsData]);
 
   const heroesByAttribute = useMemo(
     () => groupHeroesByAttribute(heroes, stats),
@@ -35,6 +60,10 @@ export default function HeroesList() {
   const handleShowMeta = () => {
     setShowMeta((prev) => !prev);
   };
+
+  if (heroesLoading || statsLoading)
+    return <Spinner className={styles.spinner} />;
+  if (heroesError || statsError) return <div>Ошибка</div>;
 
   return (
     <div className={styles.wrapper}>

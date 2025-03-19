@@ -14,10 +14,6 @@ const httpLink = createHttpLink({
   headers: {
     Authorization: TOKEN ? `Bearer ${TOKEN}` : "",
   },
-  on: {
-    error: (error) => console.error("[WebSocket error]:", error),
-    closed: () => console.log("WebSocket connection closed"),
-  },
 });
 
 const wsLink = new GraphQLWsLink(
@@ -25,6 +21,10 @@ const wsLink = new GraphQLWsLink(
     url: WS_URL,
     connectionParams: {
       Authorization: TOKEN ? `Bearer ${TOKEN}` : "",
+    },
+    on: {
+      error: (error) => console.error("[WebSocket error]:", error),
+      closed: () => console.log("WebSocket connection closed"),
     },
   })
 );

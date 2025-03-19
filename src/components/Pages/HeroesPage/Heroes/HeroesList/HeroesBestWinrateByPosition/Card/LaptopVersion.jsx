@@ -1,18 +1,29 @@
+import ImageNotFoundIcon from "../../../../../../UI/icons/ImageNotFoundIcon";
+
 const LaptopVersion = ({ heroImage, winRate, icon, heroName, styles }) => {
   return (
     <div className={`${styles.card} border`}>
       <div className={styles.background}></div>
-      <img
-        className={styles.image}
-        width="32"
-        height="32"
-        alt={heroName}
-        src={heroImage}
-        loading="lazy"
-      />
+      {heroImage ? (
+        <img
+          className={styles.image}
+          width="32"
+          height="32"
+          alt={heroName}
+          src={heroImage}
+          loading="lazy"
+        />
+      ) : (
+        <div className={styles.wrapper}>
+          <ImageNotFoundIcon className={styles.image} />
+        </div>
+      )}
+
       <div className={styles.info}>
         {icon}
-        <span className={styles.winrate}>{winRate.slice(0, 4)} %</span>
+        {winRate ? (
+          <span className={styles.winrate}>{winRate.toFixed(1)} %</span>
+        ) : null}
       </div>
     </div>
   );

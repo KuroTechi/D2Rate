@@ -1,0 +1,3 @@
+export const GAME_MODE_IDS = {
+  ALL_PICK_RANKED: "ALL_PICK_RANKED",
+};

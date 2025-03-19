@@ -12,16 +12,19 @@ import {
   GET_HEROES_WEEK_STATS,
 } from "../../../../../graphql/queries/heroes";
 import Spinner from "../../../../blocks/Spinner/Spinner";
+import { GAME_MODE_IDS } from "./HeroesBestWinrateByPosition/gameModeId";
 
 export default function HeroesList() {
   const [inputValue, setInputValue] = useState("");
   const [showMeta, setShowMeta] = useState(false);
   const [searchQuery, setSearchQuery] = useState("");
+
   const {
     data: heroesData,
     loading: heroesLoading,
     error: heroesError,
   } = useQuery(GET_HEROES);
+
   const {
     data: statsData,
     loading: statsLoading,
@@ -29,7 +32,7 @@ export default function HeroesList() {
   } = useQuery(GET_HEROES_WEEK_STATS, {
     variables: {
       take: 7,
-      gameModeIds: "ALL_PICK_RANKED",
+      gameModeIds: GAME_MODE_IDS.ALL_PICK_RANKED,
     },
   });
 

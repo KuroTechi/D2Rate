@@ -1,3 +1,5 @@
+import { useApolloClient } from "@apollo/client";
+import { HERO_FRAGMENT } from "../../../../../../../graphql/fragments/heroes";
 import {
   useMediaQuery,
   media,
@@ -5,10 +7,29 @@ import {
 import { baseUrl } from "../../../../../../../utils/urls/baseUrl";
 import styles from "./Card.module.scss";
 import LaptopVersion from "./LaptopVersion";
-const Card = ({ heroName, shortName, position, winRate, icon }) => {
+
+const Card = ({ winRate, position, icon, heroId }) => {
+  const formattedWinrate = winRate
+    ? String(winRate).padEnd(5, "0") + " %"
+    : "-";
+
+  const client = useApolloClient();
   const isLaptop = useMediaQuery(media.laptop);
+
+  const heroDetails = heroId
+    ? client.readFragment({
+        id: `HeroType:${heroId}`,
+        fragment: HERO_FRAGMENT,
+      })
+    : null;
+
+  const heroName = heroDetails?.displayName ?? "";
+  const heroShortName = heroDetails?.shortName ?? "";
+
   const imageType = isLaptop ? "icon" : "model";
-  const heroImage = `${baseUrl.images.heroPicture}${shortName}_${imageType}.png`;
+  const heroImage = heroShortName
+    ? `${baseUrl.images.heroPicture}${heroShortName}_${imageType}.png`
+    : null;
 
   if (isLaptop)
     return (
@@ -16,7 +37,7 @@ const Card = ({ heroName, shortName, position, winRate, icon }) => {
         heroImage={heroImage}
         winRate={winRate}
         icon={icon}
-        heroName={heroName || shortName}
+        heroName={heroName}
         styles={styles}
       />
     );
@@ -25,20 +46,22 @@ const Card = ({ heroName, shortName, position, winRate, icon }) => {
     <div className={`${styles.card} border`}>
       <div className={styles.background}></div>
       <div className={styles.preview}>
-        <img
-          className={styles.image}
-          width="140"
-          height="140"
-          src={heroImage}
-          alt={heroName}
-          loading="lazy"
-        />
+        {heroImage ? (
+          <img
+            className={styles.image}
+            width="140"
+            height="140"
+            src={heroImage}
+            alt={heroName}
+            loading="lazy"
+          />
+        ) : null}
       </div>
       {icon}
       <div className={styles.info}>
         <span className={styles.lane}>{position}</span>
-        <span className={styles.hero}>{heroName}</span>
-        <span className={styles.winrate}>{winRate} %</span>
+        <span className={styles.hero}>{heroName || "No Info"}</span>
+        <span className={styles.winrate}>{formattedWinrate}</span>
         <span className={styles.text}>Winrate</span>
       </div>
       <div className={styles.divider}></div>

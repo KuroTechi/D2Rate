@@ -29,3 +29,23 @@ export const GET_HEROES_WEEK_STATS = gql`
     }
   }
 `;
+
+export const GET_HEROES_WEEK_STATS_BY_POSITION = gql`
+  query WinDay(
+    $positionIds: [MatchPlayerPositionType]
+    $take: Int
+    $gameModeIds: [GameModeEnumType]
+  ) {
+    heroStats {
+      winDay(
+        positionIds: $positionIds
+        take: $take
+        gameModeIds: $gameModeIds
+      ) {
+        winCount
+        matchCount
+        heroId
+      }
+    }
+  }
+`;

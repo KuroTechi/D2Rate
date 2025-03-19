@@ -1,12 +1,9 @@
-import {
-  ApolloClient,
-  InMemoryCache,
-  createHttpLink,
-  split,
-} from "@apollo/client";
+import { ApolloClient, createHttpLink, split } from "@apollo/client";
 import { GraphQLWsLink } from "@apollo/client/link/subscriptions";
 import { createClient } from "graphql-ws";
 import { getMainDefinition } from "@apollo/client/utilities";
+import { errorLink } from "./errorLink";
+import { cache } from "./cache";
 
 const API_URL = import.meta.env.VITE_API_URL;
 const WS_URL = import.meta.env.VITE_WS_URL;
@@ -16,6 +13,10 @@ const httpLink = createHttpLink({
   uri: API_URL,
   headers: {
     Authorization: TOKEN ? `Bearer ${TOKEN}` : "",
+  },
+  on: {
+    error: (error) => console.error("[WebSocket error]:", error),
+    closed: () => console.log("WebSocket connection closed"),
   },
 });
 
@@ -37,12 +38,18 @@ const splitLink = split(
     );
   },
   wsLink,
-  httpLink
+  errorLink.concat(httpLink)
 );
 
 const apolloClient = new ApolloClient({
   link: splitLink,
-  cache: new InMemoryCache(),
+  cache,
+  defaultOptions: {
+    watchQuery: {
+      errorPolicy: "none",
+    },
+  },
+  connectToDevTools: true,
 });
 
 export default apolloClient;

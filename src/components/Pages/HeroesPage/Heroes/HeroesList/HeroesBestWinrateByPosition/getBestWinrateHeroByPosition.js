@@ -27,11 +27,12 @@ function getBestWinrateHeroByPosition(data) {
     let bestHero = null;
 
     for (let hero of heroesList) {
-      if (hero?.matchCount < MIN_MATCHES) continue;
+      if (hero?.matchCount < MIN_MATCHES || hero?.matchCount === 0) continue;
 
       let heroWinRate = (hero.winCount / hero.matchCount) * 100;
-      const formattedWinrate = Number(heroWinRate.toFixed(2));
+
       if (!bestHero || heroWinRate > bestHero.winRate) {
+        const formattedWinrate = Number(heroWinRate.toFixed(2));
         bestHero = { ...hero, winRate: formattedWinrate };
       }
     }

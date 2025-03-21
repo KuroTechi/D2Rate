@@ -1,4 +1,3 @@
-const MIN_MATCHES = 2000;
 const positions = ["carry", "mid", "offlane", "softSupport", "hardSupport"];
 
 function getBestWinrateHeroByPosition(data) {
@@ -17,30 +16,47 @@ function getBestWinrateHeroByPosition(data) {
       console.warn(
         `Пустые или некорректные данные для позиции ${positions[index]}.
         data: ${JSON.stringify(heroesList)}
-        должно быть массивом героев.
+        должно быть массивом героев с длинной массива >= 1.
         `
       );
       result[positions[index]] = null;
       return;
     }
 
-    let bestHero = null;
+    const step = 10;
+    let minMatches = 100;
+    let bestHero = findBestHero(heroesList, minMatches);
 
-    for (let hero of heroesList) {
-      if (hero?.matchCount < MIN_MATCHES || hero?.matchCount === 0) continue;
-
-      let heroWinRate = (hero.winCount / hero.matchCount) * 100;
-
-      if (!bestHero || heroWinRate > bestHero.winRate) {
-        const formattedWinrate = Number(heroWinRate.toFixed(2));
-        bestHero = { ...hero, winRate: formattedWinrate };
-      }
+    while (bestHero === null || minMatches === 0) {
+      minMatches -= step;
+      bestHero = findBestHero(heroesList, minMatches);
     }
 
     result[positions[index]] = bestHero;
   });
 
   return result;
+}
+
+function findBestHero(heroesList, minMatches) {
+  let bestHero = null;
+
+  for (let hero of heroesList) {
+    if (typeof hero !== "object") continue;
+
+    let matchCount = hero.matchCount;
+    let winCount = hero.winCount;
+
+    if (matchCount < minMatches || matchCount === 0) continue;
+
+    let heroWinRate = (winCount / matchCount) * 100;
+
+    if (!bestHero || heroWinRate > bestHero.winRate) {
+      bestHero = { ...hero, winRate: Number(heroWinRate.toFixed(2)) };
+    }
+  }
+
+  return bestHero;
 }
 
 export { getBestWinrateHeroByPosition };

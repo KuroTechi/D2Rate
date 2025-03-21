@@ -9,9 +9,9 @@ import styles from "./Card.module.scss";
 import LaptopVersion from "./LaptopVersion";
 
 const Card = ({ winRate, position, icon, heroId }) => {
-  const formattedWinrate = winRate
-    ? String(winRate).padEnd(5, "0") + " %"
-    : "-";
+  console.log(winRate);
+
+  const formattedWinrate = winRate ? `${winRate.toFixed(2)} %` : "-";
 
   const client = useApolloClient();
   const isLaptop = useMediaQuery(media.laptop);

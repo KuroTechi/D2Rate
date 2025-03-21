@@ -1,1 +1,9 @@
-JavaScript (ES6+), React, Redux Toolkit (RTK) with createAsyncThunk for GraphQL, SCSS (BEM), React Router, build via Vite.
+## 🛠 Используемые технологии
+
+- ⚡ **JavaScript (ES6+)**
+- ⚛ **React**
+- 🎛 **APOLLO CLIENT** – для работы с GraphQL
+- 🎨 **SCSS**
+- 🔀 **React Router**
+
+---

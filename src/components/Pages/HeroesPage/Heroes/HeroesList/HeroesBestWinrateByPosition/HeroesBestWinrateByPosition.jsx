@@ -40,6 +40,7 @@ function HeroesBestWinrateByPosition() {
     if (loading) return null;
     return getBestWinrateHeroByPosition(data);
   }, [data, loading]);
+  console.log(heroes);
 
   return (
     <div className={styles.wrapper}>
